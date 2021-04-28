@@ -19,6 +19,15 @@
       before: 86
       1h_after: 179
   dinner:
-    time: "1"
+    time: "20:20"
     foods:
-      hoge: "#2g"
+      ninjin: "50g"
+      tamanegi: "0.3ko"
+      torihamu: "20g"
+      gohan: "40g"
+      seachicken: "1ko"
+      chomiryo: "5g"
+  kanso:
+    - "鶏ハムはいいぞ"
+    - "高血糖用の料理をはまじに食われる屈辱"
+    - "つくりおきを楽しみたい"

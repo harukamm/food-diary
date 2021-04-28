@@ -102,6 +102,16 @@ class MeshiMap:
             return diff, tobun
         return None, None
 
+    def markdown_index(self):
+        yield "## もくじ"
+        yield ""
+
+        for x in self.lst:
+            date = str_(x["date"])
+            yield '- <a href="#' + date + '"> ' + date + '</a>'
+
+        yield ""
+
     def markdown_ketto(self, ketto, carbo_sum):
         before = ketto["before"]
 
@@ -125,6 +135,8 @@ class MeshiMap:
     def markdown(self, carbo_map):
         yield "# めし"
 
+        yield from self.markdown_index()
+
         for x in self.lst:
             date = x["date"]
             meals = x["meals"]
@@ -134,6 +146,9 @@ class MeshiMap:
             carbo_total = 0
             carbo_total_estimated = 0
             for meal_type in meals.keys():
+                if meal_type == "kanso":
+                    continue
+
                 yield ""
                 yield "### " + meal_type
                 yield ""
@@ -181,6 +196,8 @@ class MeshiMap:
             yield ""
             yield "- 総計糖分: " + self.bold_if(carbo_total, 120 < carbo_total, "g") + \
                     " ( 〜" + self.bold_if(carbo_total_estimated, 120 < carbo_total_estimated, "g") + " )"
+            if "kanso" in meals:
+                yield from ("- " + item for item in meals["kanso"])
 
 def main():
     carbo_map = CarboMap("carbo.csv")
