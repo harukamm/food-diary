@@ -1,0 +1,24 @@
+20210428:
+  breakfast:
+    time: "10:30"
+    foods:
+      ichigo: "9ko"
+      natto: 1
+      banana: "0.5ko"
+      furugura: "30g"
+      yoguruto: "30g"
+  lunch:
+    time: "14:15"
+    foods:
+      ほうれん草のおひたし: "#1g"
+      ナムル: "#3g"
+      ねぎとろハンバーグ: "#10g"
+      gohan: "60g"
+      torihamu: "40g"
+    ketto:
+      before: 86
+      1h_after: 179
+  dinner:
+    time: "1"
+    foods:
+      hoge: "#2g"
