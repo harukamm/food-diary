@@ -7,7 +7,7 @@ import yaml
 def str_(val):
     if not type(val) is float:
         return str(val)
-    return "{:.2f}".format(val)
+    return "{0:.2f}".format(val).rstrip('0').rstrip('.')
 
 class CarboMap:
     def __init__(self, fname):
@@ -20,6 +20,10 @@ class CarboMap:
             next(f)
             for line in f.readlines():
                 words = line.split(',')
+                if len(words) < 2:
+                    continue
+                if words[0][0] == '#':
+                    continue
                 id_ = words[0]
                 title = words[1]
                 amount = words[2]
@@ -47,10 +51,17 @@ class CarboMap:
             return None
 
         return amount / info["amount"] * info["carbo"]
+        
+    def get_carbo_rate_string(self, key):
+        if not key in self.map:
+            return None
+
+        info = self.map[key]
+        return str_(info["carbo"]) + "g / " + \
+                str_(info["amount"]) + info["unit"]
 
     def knows(self, key):
         return key in self.map
-
 
 class MeshiMap:
     def __init__(self, fname):
@@ -206,13 +217,121 @@ class MeshiMap:
 
             yield "---"
 
-def main():
+class KaimonoMap:
+    def __init__(self, fname):
+        self.map = self.read(fname)
+
+    @staticmethod
+    def read(fname):
+        res = {}
+        with open(fname) as f:
+            obj = yaml.safe_load(f)
+            genres = list(obj.keys())
+            i = 0
+            for genre in genres:
+                items = obj[genre]
+                res[genre] = { "items": items, "id": str_(i) }
+                i += 1
+        return res
+
+    def parse_modifiers(self, modifiers):
+        size = len(modifiers)
+        is_important = False
+        is_weakly_recommended = False
+
+        i = 0
+        while i < size:
+            c = modifiers[i]
+            next_c = modifiers[i + 1] if i + 1 < size else None
+
+            if c == '!':
+                is_important = True
+                i += 1
+            elif c == '(' and next_c == ')':
+                is_weakly_recommended = True
+                i += 2
+            else:
+                i += 1
+
+        return is_important, is_weakly_recommended
+
+    def format_item(self, item, carbo_map):
+        m = re.match(r'^([\w-]+)(.*)$', item)
+        if not m:
+            raise Exception("Invalid item: " + item)
+
+        item_key = m.group(1)
+        modifiers = m.group(2)
+
+        is_important, is_weakly_recommended = \
+                self.parse_modifiers(modifiers)
+
+        carbo_rate_str = carbo_map.get_carbo_rate_string(item_key)
+        title = carbo_map.get_title(item_key)
+        if not carbo_rate_str or not title:
+            raise Exception("Unknown key: " + item_key)
+
+        result = title
+        carbo_color = 'gray'
+        if is_important:
+            result = "__" + result + "__"
+        if is_weakly_recommended:
+            color = '#ccc'
+            carbo_color = color
+            result = '<span style="color:' + color + ';">' + result + '</span>'
+
+        return result + ' <span style="color:' + carbo_color + ';">' + carbo_rate_str + '</span>'
+
+    def markdown(self, carbo_map):
+        yield "# かいものリスト"
+
+        for genre, info in self.map.items():
+            yield ""
+            yield "## " + genre
+
+            id_ = info["id"]
+            items = info["items"]
+            item_index = 0
+
+            for item in items:
+                check_box_name = 'chk_' + str_(id_) + '_' + str_(item_index)
+                checkbox = '<input type="checkbox" name="' + check_box_name + '"> '
+                yield "- " + checkbox + self.format_item(item, carbo_map)
+                item_index += 1
+
+    # <input type="checkbox" name="chk_sample" value="apple">
+
+def exec_meshi_mode():
     carbo_map = CarboMap("carbo.csv")
     meshi_map = MeshiMap("meshi.yaml")
 
     with open("out/meshi.md", "w") as f:
         for line in meshi_map.markdown(carbo_map):
             print(line, file=f)
+
+def exec_kaimono_mode():
+    carbo_map = CarboMap("carbo.csv")
+    kaimono_map = KaimonoMap("kaimono_lst.yaml")
+
+    with open("out/kaimono.md", "w") as f:
+        for line in kaimono_map.markdown(carbo_map):
+            print(line, file=f)
+
+def exec_mode(mode):
+    if mode == "meshi":
+        exec_meshi_mode()
+    elif mode == "kaimono":
+        exec_kaimono_mode()
+    else:
+        raise Exception("Unknown mode: " + mode)
+
+def main():
+    if len(sys.argv) < 2:
+        print("python3 main.py <meshi>+")
+        sys.exit(1)
+
+    for mode in sys.argv[1:]:
+        exec_mode(mode)
 
 if __name__== "__main__":
     main()
