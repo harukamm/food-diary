@@ -31,3 +31,131 @@
     - "鶏ハムはいいぞ"
     - "高血糖用の料理をはまじに食われる屈辱"
     - "つくりおきを楽しみたい"
+20210429:
+  breakfast:
+    time: "10:00"
+    foods:
+      gold-kiui: 0.6
+      banana: 0.5
+      ninjin: "20g"
+      moyashi: "20g"
+      nitamago: 1
+      chomiryo: "5g"
+      yoguruto: "70g"
+      ichigo: 4
+  lunch:
+    time: "14:10"
+    foods:
+      torihamu: "20g"
+      ninjin: "20g"
+      ナムル: "#5g"
+      gohan: "50g"
+      moyashi: "40g"
+      nira: "10g"
+      butakoma: "80g"
+    ketto:
+      before: 84
+      1h_after: 131
+  dinner:
+    time: "20:30"
+    foods:
+      mekabu: "40g"
+      gohan: "25g"
+      いろいろプレート: "#15g"
+      nitamago: "1ko"
+  kanso:
+    - "煮卵はいいぞ"
+    - "食の好みが変わったのか、豚コマの炒めものが美味しいと感じられなかった"
+    - "糖質制限されても、普通に美味しい"
+20210430:
+  breakfast:
+    time: "10:30"
+    foods:
+      burokkori: "60g"
+      banana: 0.5
+      ichigo: 4
+      grapefruit: "0.4ko"
+      natto: 1
+      yoguruto: "50g"
+    ketto:
+      before: 74
+      1h_after: 126
+  lunch:
+    time: "14:00"
+    foods:
+      gohan: "40g"
+      torihamu: "20g"
+      nitamago: "1ko"
+      いろいろナムル: "#10g"
+      ninjin: "30g"
+  snack:
+    time: "17:00"
+    foods:
+      burokkori: "60g"
+      mekabu: "40g"
+      babycheese: "1ko"
+      chomiryo: "0.5g"
+  dinner:
+    time: "20:00"
+    foods:
+      ナムル: "#5g"
+      saba: "100g"
+      chomiryo: "5g"
+      toumyo: "100g"
+      gohan: "40g"
+      tamago: "0.5ko"
+  kanso:
+    - "スープがあると幸せ"
+    - "お菓子が食べたすぎて挫折しそうだったので、おからお菓子の本を読んで学んだ。つくるぞ〜"
+20210501:
+  breakfast:
+    time: "10:30"
+    foods:
+      おからサラダ: "#10g"
+      nitamago: "1ko"
+      yoguruto: "50g"
+      banana: "0.4"
+      ichigo: "6ko"
+  lunch:
+    time: "15:00"
+    foods:
+      butakoma: "60g"
+      tamanegi: "0.2"
+      ナムル: "#5g"
+      ninjin: "10g"
+      toumyo: "100g"
+      tamago: "0.5ko"
+      gohan: "40g"
+  oyatsu:
+    time: "18:00"
+    foods:
+      シュークリ―のシュークリーム: "#25g"
+  dinner:
+    time: "20:45"
+    foods:
+      mekabu: "40g"
+      babycheese: "1ko"
+      nitamago: "1ko"
+      torihamu: "1.5"
+      ninjin: "5g"
+      burokkori: "60g"
+      おからサラダ: "#5g"
+    ketto:
+      before: 98
+      1h_after: 98
+  kanso:
+    - "甘いものが食べれないことに絶望していたら、はまじがシュークリ―のシュークリームを朝と夕方に行列に並び、ゲットしてきた。"
+    - "美味しかった。ゴマが効いているシュークリーム珍しい。"
+    - "久々に甘い物たべたら喉が焼けるような感覚があった。罪悪感か...？"
+    - "夕飯の糖質をヒヨってめちゃめちゃ少なくして、白米抜きにしたら、血糖値が平坦になった。"
+20210502:
+  breakfast:
+    time: "10:30"
+    foods:
+      yoguruto: "40g"
+      banana: "0.2"
+      nitamago: "1ko"
+      saba: "30g"
+      おから: "#2g"
+      シュークリーム: "#25g"
+      フロマージュを二口: "#4g"

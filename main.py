@@ -84,6 +84,10 @@ class MeshiMap:
 
         return None
 
+    def format_date(self, date):
+        m = re.match(r'(\d{4})(\d{2})(\d{2})', str_(date))
+        return m.group(1) + "/" + m.group(2) + "/" + m.group(3)
+
     def bold_if(self, txt, cond, suffix=""):
         txt = str_(txt) + str_(suffix)
         if not cond:
@@ -108,7 +112,8 @@ class MeshiMap:
 
         for x in self.lst:
             date = str_(x["date"])
-            yield '- <a href="#' + date + '"> ' + date + '</a>'
+            formatted = self.format_date(date)
+            yield '- <a href="#' + date + '"> ' + formatted + '</a>'
 
         yield ""
 
@@ -141,7 +146,9 @@ class MeshiMap:
             date = x["date"]
             meals = x["meals"]
 
-            yield "## " + str_(date)
+            yield ""
+            yield "## " + self.format_date(str_(date))
+            yield ""
 
             carbo_total = 0
             carbo_total_estimated = 0
@@ -153,19 +160,17 @@ class MeshiMap:
                 yield "### " + meal_type
                 yield ""
 
-                opt_img_path = str_(date) + meal_type
-
                 meal = meals[meal_type]
 
                 img_name = str_(date) + "_" + meal_type
-                img_fname = img_name + ".jpg"
+                img_fname = "img/" + img_name + ".jpg"
                 if os.path.exists(img_fname):
                     yield '<img src="' + img_fname + '" alt="' + img_name +'" width="250"/>'
                     yield ""
 
                 yield "- 食った時間：" + meal["time"]
 
-                yield "- 内容"
+                yield "- 申告糖分"
                 foods = meal["foods"]
                 carbo_sum = 0
                 for key, indicator in foods.items():
@@ -189,7 +194,7 @@ class MeshiMap:
                     estimated_tobun = tobun
 
                 carbo_total += carbo_sum
-                carbo_total_estimated += estimated_tobun if estimated_tobun else carbo_sum
+                carbo_total_estimated += max(carbo_sum, estimated_tobun) if estimated_tobun else carbo_sum
 
             yield ""
             yield "### まとめ"
@@ -198,6 +203,8 @@ class MeshiMap:
                     " ( 〜" + self.bold_if(carbo_total_estimated, 120 < carbo_total_estimated, "g") + " )"
             if "kanso" in meals:
                 yield from ("- " + item for item in meals["kanso"])
+
+            yield "---"
 
 def main():
     carbo_map = CarboMap("carbo.csv")
