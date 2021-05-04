@@ -176,7 +176,7 @@ class MeshiMap:
                 img_name = str_(date) + "_" + meal_type
                 img_fname = "img/" + img_name + ".jpg"
                 if os.path.exists(img_fname):
-                    yield '<img src="' + img_fname + '" alt="' + img_name +'" width="250"/>'
+                    yield '<img src="' + img_fname + '" alt="' + img_name +'" width="300"/>'
                     yield ""
 
                 yield "- 食った時間：" + meal["time"]
@@ -271,7 +271,7 @@ class KaimonoMap:
         if not carbo_rate_str or not title:
             raise Exception("Unknown key: " + item_key)
 
-        result = title
+        result = '<span class="title">' + title + '</span>'
         carbo_color = 'gray'
         if is_important:
             result = "__" + result + "__"

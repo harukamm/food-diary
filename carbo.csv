@@ -7,6 +7,7 @@ grapefruit,グレープフルーツ,1,ko,20
 
 torihamu,鶏ハム,1,g,0
 torimomo,鶏もも,100,g,0
+torimune,鶏むね,100,g,0
 sasami,ささみ,100,g,0
 tori-hikiniku,鶏ひき肉,100,g,0
 butakoma,豚こま,100,g,0.2
@@ -21,21 +22,20 @@ tamanegi,たまねぎ,1,ko,14.4
 furugura,フルグラ,50,g,31.4
 yoguruto,ヨーグルト,100,g,5.8
 gohan,ご飯,150,g,55
+gokokumai,五穀米,100,g,50
 seachicken,シーチキン,1,ko,0.1
 chomiryo,なにかしらの調味料,1,g,1
 moyashi,もやし,100,g,1.3
 nitamago,煮卵,1,ko,2.5
 nira,ニラ,100,g,1.23
 mekabu,めかぶ,100,g,0
-burokkori,ブロッコリー,100,g,0.8
+konbu,昆布,100,g,30
 
-babycheese,ベビーチーズ,1,ko,0.5
-creamcheese,クリームチーズ,100,g,2.3
-meltingcheese,とろけるチーズ,1,ko,1
-namacream,生クリーム,100,ml,4
+burokkori,ブロッコリー,100,g,0.8
 
 saba,サバ,100,g,0.3
 sake,鮭,100,g,0.1
+kajiki,かじき,100,g,0.1
 jako,じゃこ,100,g,0.2
 shirasu,しらす,100,g,0
 
@@ -54,12 +54,20 @@ nasu,なす,1,ko,2.5
 naganegi,長ネギ,1,ko,8.5
 tomato,トマト,1,ko,5.5
 
+babycheese,ベビーチーズ,1,ko,0.5
+creamcheese,クリームチーズ,100,g,2.3
+meltingcheese,とろけるチーズ,1,ko,1
+namacream,生クリーム,100,ml,4
+
 tonyu,無調整豆乳,200,ml,1.6
 daizu,水煮大豆,100,g,1
+milk,牛乳,200,ml,10
+butter,バター,100,g,0.2
 men-tofu,綿豆腐,1,ko,3.6
 kinu-tofu,絹豆腐,1,ko,5.2
 okara,おから,100,g,2.3
 beans,ビーンズ缶詰,100,g,4
+abura-age,油揚げ,1,ko,0.2
 
 konnyaku,こんにゃく,1,ko,0.2
 ito-konnyaku,いとこんにゃく,1,ko,0.2
@@ -69,3 +77,5 @@ hijiki,ひじき,100,g,6
 shitake,しいたけ,1,ko,0.16
 maitake,まいたけ,100,g,0.9
 eringi,エリンギ,100,g,2.6
+
+coca-cola-zero,コカ・コーラ・ゼロ,100,ml,0

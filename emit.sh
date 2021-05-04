@@ -38,7 +38,7 @@ function output_kaimono() {
       function storeVal(id, val) {
         const vals = get();
         if (val) {
-          vals[id] = true;
+          vals[id] = val;
         } else {
           delete vals[id];
         }
@@ -49,8 +49,13 @@ function output_kaimono() {
         Object.keys(vals).map(key => {
           const val = vals[key];
           if (!val) return;
-          const node = document.querySelector('input[name=' + key + ']');
-          node.checked = true;
+          if (key == 'free-memo') {
+            const node = document.getElementById('free-memo');
+            if (node) node.textContent = val;
+          } else {
+            const node = document.querySelector('input[name=' + key + ']');
+            if (node) node.checked = true;
+          }
         });
       }
       function clearVals() {
@@ -80,6 +85,12 @@ function output_kaimono() {
             storeVal(name, this.checked);
           });
         }
+
+        // to free textarea
+        const node = document.getElementById('free-memo');
+        node.addEventListener('input', function(e) {
+          storeVal('free-memo', e.target.value);
+        });
       }
       window.addEventListener('load', (event) => {
         restoreVal();
@@ -90,6 +101,9 @@ function output_kaimono() {
     </head>
     <body>
     <input type='button' value='クリア' class='clear-button' />
+    <br />
+    <br />
+    <textarea style='width:100%;' id='free-memo'></textarea>
     """ >> $kaimono_html
   
   marked --gfm -i out/kaimono.md >> $kaimono_html

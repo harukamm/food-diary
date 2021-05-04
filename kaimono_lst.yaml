@@ -1,11 +1,12 @@
 ありがたき糖質制限のお供:
   - "mekabu!"
-  - "mozuku"
+  - "mozuku()"
   - "tamago!"
   - "moyashi!"
   - "burokkori!"
   - "babycheese!"
   - "kyuri"
+  - "coca-cola-zero"
 
 果物:
   - "ichigo"
@@ -39,6 +40,7 @@
   - "konnyaku"
   - "ito-konnyaku"
   - "shirataki"
+  - "abura-age"
 
 海藻:
   - "hijiki"
@@ -64,15 +66,16 @@
   - "shirasu"
 
 チーズ:
-  - "creamcheese"
-  - "babycheese"
+  - "creamcheese!"
+  - "babycheese!"
   - "meltingcheese"
 
 乳製品:
-  - "tonyu"
-  - "tamago"
+  - "tonyu!"
+  - "tamago!"
   - "yoguruto"
-  - "namacream"
+  - "butter!"
+  - "namacream!"
 
 缶詰系:
   - "beans"

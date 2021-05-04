@@ -162,3 +162,103 @@
     ketto:
       before: 84
       2h_after: 112
+  lunch:
+    time: "14:50"
+    foods:
+      gohan: "50g"
+      tonyu: "100ml"
+      tamanegi: "0.3ko"
+      eringi: "50g"
+      burokkori: "40g"
+      butakoma: "50g"
+      chomiryo: "5g"
+  dinner:
+    time: "20:55"
+    foods:
+      torimune: "60g"
+      piman: "3ko"
+      takenoko: "30g"
+      gohan: "50g"
+      ナムル: "#3g"
+20210503:
+  breakfast:
+    time: "10:20"
+    foods:
+      ichigo: "5ko"
+      gold-kiui: "1ko"
+      yoguruto: "50g"
+      banana: "0.3"
+      サラダ: "#4g"
+      torihamu: "20g"
+  lunch:
+    time: "14:00"
+    foods:
+      torihamu: "40g"
+      hijiki: "40g"
+      ito-konnyaku: "0.5ko"
+      daizu: "30g"
+      ninjin: "10g"
+      おからサラダ: "#3g"
+      saba: "15g"
+      gokokumai: "40g"
+      chomiryo: "#5g"
+  oyatsu:
+    time: "17:00"
+    foods:
+      SUNAO抹茶アイス: "#9.2g"
+  dinner:
+    time: "20:00"
+    foods:
+      豆乳スープ: "#6g"
+      gokokumai: "60g"
+      ninjin: "10g"
+      moyashi: "30g"
+      konnyaku: "0.2ko"
+      chomiryo: "#5g"
+      butakoma: "40g"
+      tamanegi: "0.2"
+    ketto:
+      before: 87
+      1h_after: 168
+  kanso:
+    - "夕飯後の血糖値が高くて落ち込んだ。"
+    - "夕方にアイスクリーム（間食）を食べたせいかもしれない。間食の正しい食べ方がわからない、落ち込む。。"
+    - "18時半から19時半にかけて、一睡したことも悪かった？"
+20210504:
+  breakfast:
+    time: "10:00"
+    foods:
+      torihamu: "20g"
+      burokkori: "30g"
+      natto: "1ko"
+      yoguruto: "40g"
+      milk: "100ml"
+      gold-kiui: "0.5"
+      ichigo: "4ko"
+  lunch:
+    time: "14:20"
+    foods:
+      gokokumai: "50g"
+      horenso: "30g"
+      tamago: "0.3"
+      maitake: "50g"
+      kajiki: "60g"
+      retasu: "20g"
+      ひじき: "#3g"
+      chomiryo: "3g"
+  dinner:
+    time: "19:40"
+    foods:
+      torihamu: "20g"
+      nitamago: "1ko"
+      ninjin: "10g"
+      moyashi: "30g"
+      kyuri: "0.3ko"
+      daizu: "10g"
+      saba: "20g"
+      horenso: "30g"
+      maitake: "15g"
+      chomiryo: "5g"
+      konbu: "20g"
+  kanso:
+    - "ご飯後に測った体重が1kg減っていた。これが糖質ダイエットか・・"
