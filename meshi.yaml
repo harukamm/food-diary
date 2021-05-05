@@ -260,5 +260,21 @@
       maitake: "15g"
       chomiryo: "5g"
       konbu: "20g"
+    ketto:
+      before: 81
+      1h_after: 90
   kanso:
     - "ご飯後に測った体重が1kg減っていた。これが糖質ダイエットか・・"
+20210505:
+  breakfast:
+    time: "10:00"
+    foods:
+      milk: "100ml"
+      ichigo: "5ko"
+      gold-kiui: "0.5"
+      yoguruto: "50g"
+      konbu: "10g"
+      torihamu: "20g"
+      burokkori: "20g"
+      creamcheese: "5g"
+      自作クッキー: "#4g"

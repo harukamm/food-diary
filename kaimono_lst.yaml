@@ -54,10 +54,12 @@
 
 肉:
   - "torimomo"
+  - "torimune"
   - "buta-block"
   - "sasami"
   - "tori-hikiniku"
   - "aibiki"
+  - "soseji"
 
 お魚:
   - "sake"
@@ -72,10 +74,13 @@
 
 乳製品:
   - "tonyu!"
+  - "milk!"
   - "tamago!"
   - "yoguruto"
   - "butter!"
   - "namacream!"
 
-缶詰系:
+他:
   - "beans"
+  - "carbo-zero-noodle"
+  - "coca-cola-zero"
