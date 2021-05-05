@@ -125,6 +125,7 @@ class MeshiMap:
             date = str_(x["date"])
             formatted = self.format_date(date)
             yield '- <a href="#' + date + '"> ' + formatted + '</a>'
+        yield '- <a href="#テーブル"> テーブル </a>'
 
         yield ""
 
@@ -153,12 +154,14 @@ class MeshiMap:
 
         yield from self.markdown_index()
 
+        ketto_history = {}
         for x in self.lst:
             date = x["date"]
+            date_ = str_(date)
             meals = x["meals"]
 
             yield ""
-            yield "## " + self.format_date(str_(date))
+            yield "## " + self.format_date(date_)
             yield ""
 
             carbo_total = 0
@@ -173,7 +176,7 @@ class MeshiMap:
 
                 meal = meals[meal_type]
 
-                img_name = str_(date) + "_" + meal_type
+                img_name = date_ + "_" + meal_type
                 img_fname = "img/" + img_name + ".jpg"
                 if os.path.exists(img_fname):
                     yield '<img src="' + img_fname + '" alt="' + img_name +'" width="300"/>'
@@ -201,14 +204,15 @@ class MeshiMap:
                 estimated_tobun = None
                 if "ketto" in meal:
                     yield from self.markdown_ketto(meal["ketto"], carbo_sum)
-                    _a, tobun = self.calc_using_ketto(meal["ketto"])
+                    diff, tobun = self.calc_using_ketto(meal["ketto"])
                     estimated_tobun = tobun
+                    ketto_history[date_ + "_" + meal_type] = { "ketto_diff": diff, "carbo_sum": carbo_sum }
 
                 carbo_total += carbo_sum
                 carbo_total_estimated += max(carbo_sum, estimated_tobun) if estimated_tobun else carbo_sum
 
             yield ""
-            yield "### まとめ"
+            yield "### 感想"
             yield ""
             yield "- 総計糖分: " + self.bold_if(carbo_total, 120 < carbo_total, "g") + \
                     " ( 〜" + self.bold_if(carbo_total_estimated, 120 < carbo_total_estimated, "g") + " )"
@@ -216,6 +220,22 @@ class MeshiMap:
                 yield from ("- " + item for item in meals["kanso"])
 
             yield "---"
+
+        yield ""
+        yield "## テーブル"
+        yield ""
+
+        keys = list(ketto_history.keys())
+        keys.sort()
+        yield   "| 日付 | 合計糖分 (g) | 血糖差 (dL/ml) | 糖分 1g あたりの血糖差 |"
+        yield   "| ---- | ---- | ---- | ---- |"
+
+        for key in keys:
+            info = ketto_history[key]
+            a = info["ketto_diff"]
+            b = info["carbo_sum"]
+            c = a / b
+            yield "| " + key + " | " + str_(b) + " | " + str_(a) + " | " + str_(c) + " | "
 
 class KaimonoMap:
     def __init__(self, fname):

@@ -278,3 +278,24 @@
       burokkori: "20g"
       creamcheese: "5g"
       自作クッキー: "#4g"
+  lunch:
+    time: "14:00"
+    foods:
+      gokokumai: "50g"
+      chomiryo: "10g"
+  dinner:
+    time: "20:00"
+    foods:
+      gokokumai: "50g"
+      たらの粕漬け: "#2.5g"
+      men-tofu: "0.5ko"
+      naganegi: "0.2ko"
+      katakuriko: "15g"
+      konbu: "10g"
+      自作マフィン: "#2g"
+    ketto:
+      before: 85
+      1h_after: 170
+  kanso:
+    - "五穀米にしてから、血糖値が高くあがるようになったので、おそらく五穀米が犯人。明日からは、白米に戻してみることにした。"
+    - "おちこむ。"

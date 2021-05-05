@@ -10,7 +10,18 @@ function output_meshi() {
       <meta charset="UTF-8" />
       <meta NAME="viewport" content='width=device-width, initial-scale=1' />
       <title>はるかめしにっき</title>
-      <style></style>
+      <style>
+        table { border-collapse: collapse; }
+        table, td, th {
+          border: 1px solid black;
+        }
+        td, th {
+          padding: 5px;
+        }
+        th {
+          background-color: #eee;
+        }
+      </style>
     </head>
     <body>""" >> $meshi_html
   
