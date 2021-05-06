@@ -145,9 +145,7 @@ class MeshiMap:
 
         diff, tobun = self.calc_using_ketto(ketto)
         if tobun:
-            yield "  - 考察"
-            yield "    - 差分: " + str_(diff)
-            yield "    - 差分から想定される摂取糖分量: " + self.bold_if(tobun, 40 < tobun, "g")
+            yield "  - 差分: " + str_(diff)
  
     def markdown(self, carbo_map):
         yield "# めし"
@@ -165,7 +163,6 @@ class MeshiMap:
             yield ""
 
             carbo_total = 0
-            carbo_total_estimated = 0
             for meal_type in meals.keys():
                 if meal_type == "kanso":
                     continue
@@ -201,21 +198,17 @@ class MeshiMap:
 
                 yield "- 合計糖分: " + self.bold_if(carbo_sum, 40 < carbo_sum, "g")
 
-                estimated_tobun = None
                 if "ketto" in meal:
                     yield from self.markdown_ketto(meal["ketto"], carbo_sum)
-                    diff, tobun = self.calc_using_ketto(meal["ketto"])
-                    estimated_tobun = tobun
+                    diff, _a = self.calc_using_ketto(meal["ketto"])
                     ketto_history[date_ + "_" + meal_type] = { "ketto_diff": diff, "carbo_sum": carbo_sum }
 
                 carbo_total += carbo_sum
-                carbo_total_estimated += max(carbo_sum, estimated_tobun) if estimated_tobun else carbo_sum
 
             yield ""
             yield "### 感想"
             yield ""
-            yield "- 総計糖分: " + self.bold_if(carbo_total, 120 < carbo_total, "g") + \
-                    " ( 〜" + self.bold_if(carbo_total_estimated, 120 < carbo_total_estimated, "g") + " )"
+            yield "- 総計糖分: " + self.bold_if(carbo_total, 120 < carbo_total, "g")
             if "kanso" in meals:
                 yield from ("- " + item for item in meals["kanso"])
 
