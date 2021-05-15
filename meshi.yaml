@@ -322,10 +322,365 @@
       burokkori: "20g"
       gohan: "50g"
       カレー: "#6g"
+  dinner:
+    time: "19:30"
+    foods:
+      gohan: "50g"
+      moyashi: "20g"
+      okura: "1ko"
+      jako: "5g"
+      torihamu: "20g"
+      babycheese: "1ko"
+      chomiryo: "5g"
+      カレー: "#6g"
+      自作マフィン: "#2g"
+    ketto:
+      before: 88
+      1h_after: 136
   kanso:
-    - "低糖質カレーを作ってみた。全体糖質は、13g（トマト缶１つ）+ 7.2g（玉ねぎ100g）+ 5g（飲む大豆500ml）+ 13g（カレー粉 20g）= 38.2g ≒ 40g"
-    - "量的に、お玉すりきり一杯あたり、糖質 4g 未満。小麦粉なしで、とろみは豆乳由来。美味しい。"
-    - "レシピ："
-    - " - 鍋にバター溶かして、豚こまのみじん切り 400g ほど炒め、細切り玉ねぎを投入。トマト缶を入れて、生姜のみじん切りをたくさんいれる。"
-    - " - 煮立ってきたら、豆乳入れて、醤油を小さじ１強入れる。煮込んでから、カレー粉豆乳。煮込んで終了。"
-    - " - 盛り付け時に、とろけるチーズ・マヨネーズ・粉チーズなどをかけると、見た目のギルティさが増し、少量でも満足度が高い。"
+    - "五穀米を食ったときの血糖値が上がりやすいので、白米に変えた。予想通りの血糖値に戻ったので、安心。"
+    - "食後５分以内に、かかと落としの運動をすることに決めた。"
+    - "低糖質カレーを作ってみた。全体糖質は、13g（トマト缶１つ）+ 7.2g（玉ねぎ100g）+ 5g（飲む大豆500ml）+ 13g（カレー粉 20g）= 38.2g ≒ 40g、他、バター・醤油・生姜"
+20210507:
+  breakfast:
+    time: "10:00"
+    foods:
+      gold-kiui: "0.5"
+      ichigo: "6ko"
+      milk: "100ml"
+      burokkori: "40g"
+      nitamago: "1ko"
+      torihamu: "20g"
+      creamcheese: "10g"
+      ninjin: "20g"
+      moyashi: "15g"
+      okura: "1ko"
+      jako: "5g"
+      自作クッキー: "#3g"
+  lunch:
+    time: "13:40"
+    foods:
+      moyashi: "10g"
+      okura: "1"
+      konbu: "10g"
+      ninjin: "10g"
+      カレー: "#7g"
+      gohan: "50g"
+      SUNAOチョコモナカ: "#8.6g"
+  dinner:
+    time: "19:30"
+    foods:
+      gohan: "50g"
+      burokkori: "30g"
+      konbu: "10g"
+      abura-age: "1ko"
+      men-tofu: "0.2ko"
+      naganegi: "0.2ko"
+      tori-hikiniku: "60g"
+      toumyo: "20g"
+      自作マフィン: "#3g"
+    ketto:
+      before: 84
+      2h_after: 98
+20210508:
+  breakfast:
+    time: "10:10"
+    foods:
+      burokkori: "20g"
+      creamcheese: "10g"
+      abura-age: "0.5ko"
+      鶏つくね: "#2g"
+      ichigo: "3ko"
+      gold-kiui: "0.5ko"
+      クッキー: "#2g"
+      yoguruto: "50g"
+      milk: "100ml"
+  lunch:
+    time: "12:10"
+    foods:
+      ninjin: "10g"
+      konbu: "10g"
+      chomiryo: "5g"
+      gohan: "50g"
+  dinner:
+    time: "20:00"
+    foods:
+      edamame: "50g"
+      babycheese: "1ko"
+      コンビニサラダ: "#5g"
+      チョコなどのお菓子: "#10g"
+  kanso:
+    - "晩ごはんは、実家でいろいろ食ったけど、お菓子は一欠片と、総じて我慢。"
+    - "はまじとコンビニパン買おうとして、その糖質の高さにめまい。普通に 40g 以上。"
+20210509:
+  breakfast:
+    time: "10:30"
+    foods:
+      ninjin: "20g"
+      torihamu: "20g"
+      burokkori: "10g"
+      おから唐揚げ: "#2g"
+      babycheese: "1ko"
+      ichigo: "3ko"
+      gold-kiui: "0.5ko"
+      milk: "100ml"
+      yoguruto: "50g"
+      自作マフィン: "#2g"
+    ketto:
+      before: 80
+      2h_after: 95
+  lunch:
+    time: "14:30"
+    foods:
+      gohan: "50g"
+      ninjin: "5g"
+      konbu: "10g"
+      torimomo: "40g"
+      chomiryo: "5g"
+      SUNAOアイスいちご: "#8.1g"
+  dinner:
+    time: "20:00"
+    foods:
+      gohan: "50g"
+      ninjin: "5g"
+      jako: "5g"
+      カレー: "#6g"
+      babycheese: "1ko"
+      自作マフィン: "#2g"
+20210510:
+  breakfast:
+    time: "10:00"
+    foods:
+      milk: "100ml"
+      mekabu: "40g"
+      gold-kiui: "0.5ko"
+      ichigo: "2ko"
+      自作カステラ_50g: "#4g"
+      ninjin: "10g"
+      kyuri: "0.3ko"
+      torihamu: "20g"
+  lunch:
+    time: "13:00"
+    foods:
+      gohan: "50g"
+      nitamago: "1ko"
+      ninjin: "20g"
+      torihamu: "20g"
+      kyuri: "0.1ko"
+      komatsuna: "20g"
+      naganegi: "0.2ko"
+      kinu-tofu: "0.5ko"
+      chomiryo: "5g"
+      自作カステラ_55g: "#5g"
+  dinner:
+    time: "21:00"
+    foods:
+      ninjin: "20g"
+      creamcheese: "10g"
+      kimuchi: "40g"
+      gohan: "50g"
+      noritama: "4g"
+      自作マフィン: "#2g"
+      kinu-tofu: "0.25ko"
+      chomiryo: "#5g"
+    ketto:
+      before: 88
+      2h_after: 110
+  kanso:
+    - "620g も作れた自作カステラ、おいしすぎる。16g (大豆粉 100g) + 13g (牛乳 110g) + 16g (はちみつ 20g) + 0.6g (卵 6個) + 0.2g (バター 100g) = 45.8g"
+20210511:
+  breakfast:
+    time: "10:00"
+    foods:
+      konbu: "10g"
+      milk: "120ml"
+      natto: "1ko"
+      kyuri: "0.1ko"
+      ichigo: "5ko"
+      gold-kiui: "0.5ko"
+      ソーセージ: "#2g"
+      自作カステラ_50g: "#4g"
+  lunch:
+    time: "13:30"
+    foods:
+      kimuchi: "15g"
+      noritama: "3g"
+      retasu: "10g"
+      あじみりん: "#4g"
+      horenso: "10g"
+      ピーナッツ: "#1g"
+      ninjin: "10g"
+      kyuri: "0.1ko"
+      konbu: "5g"
+      gohan: "50g"
+  dinner:
+    time: "20:00"
+    foods:
+      gohan: "50g"
+      kinu-tofu: "0.7ko"
+      tamago: "1ko"
+      noritama: "5g"
+      自作カステラ_50g: "#4g"
+    ketto:
+      before: 87
+      2h_after: 108
+20210512:
+  breakfast:
+    time: "10:00"
+    foods:
+      yoguruto: "50g"
+      prune: "20g"
+      gold-kiui: "0.5ko"
+      ichigo: "4ko"
+      horenso: "15g"
+      milk: "100ml"
+      ソーセージ: "#2g"
+      kyuri: "0.1ko"
+    ketto:
+      before: 93
+      2h_after: 108
+  lunch:
+    time: "13:20"
+    foods:
+      gohan: "50g"
+      あじみりん: "#4g"
+      retasu: "5g"
+      kinu-tofu: "0.5ko"
+      chomiryo: "4g"
+      prune: "20g"
+  dinner:
+    time: "20:00"
+    foods:
+      ロカボふすまパン_2個: "#4.4g"
+      ロカボマーガリンパン: "#4.7g"
+      ロカボチョコクッキー: "#3g"
+      babycheese: "2ko"
+      komatsuna: "20g"
+      konbu: "5g"
+      kimuchi: "10g"
+  kanso:
+    - "ストレスが達し、コンビニでロカボパンとお菓子を買い、隅田川の脇ではまじと食い、あまりにガッツイたためにお腹を痛めた。"
+    - "帰宅して、お腹痛いので、まるまる。22時に、ホッケなどを食った。"
+20210513:
+  breakfast:
+    time: "09:40"
+    foods:
+      jako: "10g"
+      komatsuna: "10g"
+      tamago: "0.2ko"
+      milk: "100ml"
+      yoguruto: "60g"
+      burokkori: "30g"
+      horenso: "10g"
+      prune: "18g"
+      natto: "1ko"
+      mekabu: "40g"
+      自作カステラ_40g: "#3g"
+      gold-kiui: "0.5ko"
+      ichigo: "4ko"
+    ketto:
+      before: 93
+      2h_after: 116
+  lunch:
+    time: "14:00"
+    foods:
+      sake: "100g"
+      kimuchi: "10g"
+      kyuri: "0.1ko"
+      konbu: "10g"
+      creamcheese: "30g"
+      milk: "50ml"
+      tamanegi: "0.1ko"
+      gohan: "50g"
+      burokkori: "20g"
+      prune: "10g"
+  dinner:
+    time: "20:00"
+    foods:
+      ninjin: "5g"
+      konbu: "10g"
+      moyashi: "15g"
+      gohan: "50g"
+      カレー: "#7g"
+      ロカボもちムギパン: "#4.7g"
+  kanso:
+    - "昨日から体調不良なのが原因か、朝起きたときの血糖値が高め。"
+    - "カレー作った。ピーマン(170g,2.8g) 4.76g + ナス(330g,2.9g) 9.57g + 玉ねぎ(110g,5.6g) 6.16g + トマト缶(一缶) 14g + カレー粉(20g) 13g = 47.5g ≒ 50g"
+    - "２人前が４回分なので、一人前 6.5g 程度。"
+20210514:
+  breakfast:
+    time: "10:20"
+    foods:
+      creamcheese: "15g"
+      burokkori: "30g"
+      tamago: "1ko"
+      konbu: "10g"
+      horenso: "10g"
+      milk: "100ml"
+      gold-kiui: "0.5ko"
+      ichigo: "3ko"
+      prune: "18g"
+      ゼリー: "#2g"
+      クッキー: "#3g"
+  lunch:
+    time: "14:10"
+    foods:
+      gohan: "20g"
+      burokkori: "20g"
+      horenso: "8g"
+      ソース_10g: "#3.1g"
+      kyabetsu: "30g"
+      menchi-katsu: "15g"
+      ton-katsu: "50g"
+      aji-fly: "20g"
+      kanicream-korokke: "30g"
+    ketto:
+      before: 91
+      2h_after: 112
+  dinner:
+    time: "20:30"
+    foods:
+      gohan: "25g"
+      tetsu-uehasu: "3ko"
+      retasu: "10g"
+      カレー: "#7g"
+      toumyo: "30g"
+      ローソンブランパン: "#2.2g"
+20210515:
+  breakfast:
+    time: "10:00"
+    foods:
+      yoguruto: "40g"
+      milk: "100ml"
+      natto: "1ko"
+      tetsu-uehasu: "2ko"
+      パン半分: "#4.4g"
+      gold-kiui: "0.5ko"
+      ichigo: "3ko"
+      prune: "10g"
+      burokkori: "20g"
+      horenso: "8g"
+    ketto:
+      before: 86
+      2h_after: 107
+  lunch:
+    time: "14:00"
+    foods:
+      カルボナーラ: "#35g"
+      chomiryo: "4g"
+  dinner:
+    time: "20:00"
+    foods:
+      gohan: "50g"
+      kajiki: "60g"
+      toumyo: "20g"
+      ねぎとろハンバーグ: "#5g"
+      konbu: "10g"
+      retasu: "10g"
+      kimuchi: "10g"
+      スープ: "#4g"
+      ブランパン: "#2.2g"
+      tetsu-uehasu: "1ko"
+  kanso:
+    - "自分で麺を打ってみたが、くそ不味くて吐き出した。結局はまじのカルボナーラを分けてもらった。美味しくて泣いた。"
+    - "くそまずい方のカルボナーラをはまじが食べてて、申し訳なくなって、落ち込んだ。"

@@ -153,6 +153,7 @@ class MeshiMap:
         yield from self.markdown_index()
 
         ketto_history = {}
+        carbo_history = {}
         for x in self.lst:
             date = x["date"]
             date_ = str_(date)
@@ -197,6 +198,7 @@ class MeshiMap:
                     carbo_sum += carbo
 
                 yield "- 合計糖分: " + self.bold_if(carbo_sum, 40 < carbo_sum, "g")
+                carbo_history[date_ + "_" + meal_type] = carbo_sum
 
                 if "ketto" in meal:
                     yield from self.markdown_ketto(meal["ketto"], carbo_sum)
@@ -218,9 +220,21 @@ class MeshiMap:
         yield "## テーブル"
         yield ""
 
+        #yield "### 合計糖質"
+
+        #yield   "| 日付 | 合計糖分 (g) |"
+        #yield   "| ---- | ---- |"
+        #x = 0
+        #for key in carbo_history.keys():
+        #    v = carbo_history[key]
+        #    x += v
+        #    yield "| " + key + " | " + str_(v) + " | "
+
+        yield "### 上昇血糖割合"
+
         keys = list(ketto_history.keys())
         keys.sort()
-        yield   "| 日付 | 合計糖分 (g) | 血糖差 (dL/ml) | 糖分 1g あたりの血糖差 |"
+        yield   "| 日付 | 合計糖分 (g) | 血糖差 (dl/ml) | 糖分 1g あたりの血糖差 |"
         yield   "| ---- | ---- | ---- | ---- |"
 
         for key in keys:
@@ -229,6 +243,7 @@ class MeshiMap:
             b = info["carbo_sum"]
             c = a / b
             yield "| " + key + " | " + str_(b) + " | " + str_(a) + " | " + str_(c) + " | "
+
 
 class KaimonoMap:
     def __init__(self, fname):

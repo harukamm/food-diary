@@ -77,6 +77,33 @@ function output_kaimono() {
           node.checked = false;
         }
       }
+      function syncCheckedItems() {
+        const nodes = document.querySelectorAll('input[type=checkbox]');
+        const names = [];
+        for (var i = 0; i < nodes.length; i++) {
+          const node = nodes[i];
+          if (!node.checked) continue;
+
+          var elem = node.nextSibling;
+          var title = null;
+          while (elem) {
+            console.log(elem);
+            if (elem.className == 'title') {
+              break;
+            }
+            const nested = elem.querySelector('.title');
+            if (nested) {
+              elem = nested;
+              break;
+            }
+            elem = elem.nextSibling;
+          }
+          if (!elem) continue;
+          const name = elem.textContent.trim();
+          names.push(name);
+        }
+        document.getElementById('names').textContent = names.join(', ');
+      }
       function addListeners() {
         // to clear buttons
         const buttons = document.querySelectorAll('.clear-button');

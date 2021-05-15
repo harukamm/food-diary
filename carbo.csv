@@ -4,6 +4,7 @@ banana,バナナ,1,ko,19.4
 ichigo,いちご,1,ko,1.1
 gold-kiui,ゴールドキウイ,1,ko,13.5
 grapefruit,グレープフルーツ,1,ko,20
+prune,プルーン,100,g,56
 
 torihamu,鶏ハム,1,g,0
 torimomo,鶏もも,100,g,0
@@ -41,11 +42,13 @@ jako,じゃこ,100,g,0.2
 shirasu,しらす,100,g,0
 
 toumyo,豆苗,100,g,0.7
+edamame,枝豆,100,g,4.3
 tamago,卵,1,ko,0.1
 tamanegi,玉ねぎ,1,ko,15
 mozuku,もずく酢,50,g,9
 kyuri,きゅうり,1,ko,2.0
 horenso,ほうれん草,100,g,0.3
+kyabetsu,キャベツ,100,g,3.4
 komatsuna,小松菜,100,g,0.6
 retasu,レタス,100,g,1.7
 myoga,みょうが,1,ko,0.1
@@ -55,6 +58,7 @@ nasu,なす,1,ko,2.5
 naganegi,長ネギ,1,ko,8.5
 tomato,トマト,1,ko,5.5
 okura,おくら,1,ko,0.16
+kimuchi,こくうまキムチ,100,g,11.5
 
 babycheese,ベビーチーズ,1,ko,0.5
 creamcheese,クリームチーズ,100,g,2.3
@@ -83,3 +87,10 @@ eringi,エリンギ,100,g,2.6
 coca-cola-zero,コカ・コーラ・ゼロ,100,ml,0
 carbo-zero-noodle,糖質ゼロ麺,100,g,0
 katakuriko,片栗粉,100,g,82
+noritama,のりたま,2.5,g,1
+tetsu-uehasu,鉄ウエハース,3,ko,12.6
+
+menchi-katsu,メンチカツ,154,g,14.3
+ton-katsu,トンカツ,130,g,12
+aji-fly,アジフライ,50,g,3.5
+kanicream-korokke,カニクリームコロッケ,60,g,13
