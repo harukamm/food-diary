@@ -112,9 +112,10 @@ class MeshiMap:
 
         if after1 or after2:
             after = max(after1 or 0, after2 or 0)
+            hour_diff = 1 if after1 == after else 2
             diff = after - before
             tobun = diff / 1.4
-            return diff, tobun
+            return diff, tobun, hour_diff
         return None, None
 
     def markdown_index(self):
@@ -143,7 +144,7 @@ class MeshiMap:
         if after2:
             yield "  - 食後２時間: " + str_(after2)
 
-        diff, tobun = self.calc_using_ketto(ketto)
+        diff, tobun, hour_diff = self.calc_using_ketto(ketto)
         if tobun:
             yield "  - 差分: " + str_(diff)
  
@@ -168,8 +169,9 @@ class MeshiMap:
                 if meal_type == "kanso":
                     continue
 
+                id_ = date_ + "_" + meal_type
                 yield ""
-                yield "### " + meal_type
+                yield "### <div id='" + id_ + "'>" + meal_type + "</div>"
                 yield ""
 
                 meal = meals[meal_type]
@@ -202,8 +204,8 @@ class MeshiMap:
 
                 if "ketto" in meal:
                     yield from self.markdown_ketto(meal["ketto"], carbo_sum)
-                    diff, _a = self.calc_using_ketto(meal["ketto"])
-                    ketto_history[date_ + "_" + meal_type] = { "ketto_diff": diff, "carbo_sum": carbo_sum }
+                    diff, _a, hour_diff = self.calc_using_ketto(meal["ketto"])
+                    ketto_history[date_ + "_" + meal_type] = { "ketto_diff": diff, "carbo_sum": carbo_sum, "hour_diff": hour_diff }
 
                 carbo_total += carbo_sum
 
@@ -234,15 +236,18 @@ class MeshiMap:
 
         keys = list(ketto_history.keys())
         keys.sort()
-        yield   "| 日付 | 合計糖分 (g) | 血糖差 (dl/ml) | 糖分 1g あたりの血糖差 |"
-        yield   "| ---- | ---- | ---- | ---- |"
+        yield   "|  | 日付 | 合計糖分 (g) | 血糖差 (dl/ml) | 血糖差 / 糖質 1g | 間隔 |"
+        yield   "| ---- | ---- | ---- | ---- | ---- | ---- |"
 
         for key in keys:
             info = ketto_history[key]
+            date, meal_type = key.split('_')
             a = info["ketto_diff"]
             b = info["carbo_sum"]
             c = a / b
-            yield "| " + key + " | " + str_(b) + " | " + str_(a) + " | " + str_(c) + " | "
+            d = info["hour_diff"]
+            link = "<a href='#" + key + "'>#</a>"
+            yield "| " + link + " | " + date + " | " + str_(b) + " | " + str_(a) + " | " + str_(c) + " | " + str_(d) + " | "
 
 
 class KaimonoMap:

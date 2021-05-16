@@ -684,3 +684,49 @@
   kanso:
     - "自分で麺を打ってみたが、くそ不味くて吐き出した。結局はまじのカルボナーラを分けてもらった。美味しくて泣いた。"
     - "くそまずい方のカルボナーラをはまじが食べてて、申し訳なくなって、落ち込んだ。"
+20210516:
+  breakfast:
+    time: "10:10"
+    foods:
+      toumyo: "10g"
+      kimuchi: "4g"
+      tetsu-uehasu: "3ko"
+      mekabu: "40g"
+      milk: "100ml"
+      gold-kiui: "0.5ko"
+      prune: "10g"
+      ichigo: "3ko"
+      ゼリー: "#2g"
+      ベーコンパン: "#6.3g"
+  lunch:
+    time: "14:20"
+    foods:
+      moyashi: "10g"
+      konbu: "5g"
+      toumyo: "5g"
+      kimuchi: "3g"
+      カレー: "#8g"
+      gohan: "30g"
+      babycheese: "1ko"
+      tamago: "0.5ko"
+      ローソンロカボキャラメルクッキー_2枚: "#3g"
+      ローソンクリームもち麦パン: "#5.7g"
+  dinner:
+    time: "20:40"
+    foods:
+      kinu-tofu: "0.3ko"
+      hijiki: "10g"
+      edamame: "5g"
+      piman: "0.3ko"
+      konbu: "5g"
+      kimuchi: "5g"
+      torimune: "50g"
+      片栗粉: "#5g"
+      chomiryo: "3g"
+      gohan: "20g"
+      ロカボバタースティック: "#8.8g"
+      ローソンロカボキャラメルクッキー_1枚: "#1.5g"
+      自作カステラ: "#5g"
+    ketto:
+      before: 89
+      2h_after: 120
