@@ -729,4 +729,163 @@
       自作カステラ: "#5g"
     ketto:
       before: 89
-      2h_after: 120
+      2h_after: 125
+  kanso:
+    - "夕飯、かなりテンション高くていろいろ食って、まあ計算上糖質 40g 未満だし〜と安心してたが、血糖値差から言って、サバよんでるな・・"
+    - "これから好き勝手いろいろ食いたいときは、枝豆・片栗粉などのグレー物と、御飯などの黒物を、摂取しないことに決めた。"
+    - "実はこの他にも杏仁豆腐とかもはまじから二口貰ってた。私は低糖質ならなんでも食っていいんだ！と無双状態のきもちになっていたかも、反省。"
+20210517:
+  breakfast:
+    time: "10:00"
+    foods:
+      milk: "100ml"
+      yoguruto: "50g"
+      tetsu-uehasu: "3ko"
+      natto: "1ko"
+      gold-kiui: "0.5ko"
+      ichigo: "4ko"
+      prune: "10g"
+      konbu: "5g"
+      杏仁豆腐_二口: "#1.8g"
+  lunch:
+    time: "13:50"
+    foods:
+      tonyu: "50ml"
+      mentaiko: "25g"
+      うどん_78g: "#22g"
+      ローソンクリームもち麦パン: "#5.7g"
+      ブランパン: "#2.2g"
+      piman: "0.5ko"
+      konbu: "5g"
+      kyuri: "0.1ko"
+    ketto:
+      before: 77
+      2h_after: 99
+  dinner:
+    time: "19:10"
+    foods:
+      gohan: "30g"
+      kinu-tofu: "0.2ko"
+      nitamago: "1ko"
+      konbu: "5g"
+      カレー: "#10g"
+      SUNAOアイス: "#11.7g"
+      kyuri: "0.1ko"
+      piman: "0.5ko"
+20210518:
+  breakfast:
+    time: "10:00"
+    foods:
+      tetsu-uehasu: "2ko"
+      ところてん: "#5g"
+      milk: "100ml"
+      ichigo: "3ko"
+      gold-kiui: "0.5ko"
+      prune: "15g"
+      chomiryo: "#3g"
+  lunch:
+    time: "14:00"
+    foods:
+      ちいさなおうどん: "#27g"
+      burokkori: "30g"
+      ミルクボール: "#5.7g"
+      うめぼし_1個: "#2g"
+  dinner:
+    time: "19:30"
+    foods:
+      ringo: "80g"
+      からあげ一口: "#3g"
+      やきそば一口: "#3g"
+      mekabu: "40g"
+      burokkori: "60g"
+      tetsu-uehasu: "1ko"
+      ブランパン: "#2.2g"
+      ミルクボール: "#5.7g"
+      おやついろいろ: "#6g"
+    ketto:
+      before: 85
+      2h_after: 131
+  kanso:
+    - "昨晩、嘔吐・頭痛・消化不良・微熱でしんどかった。嘔吐は過去最多量で、壁や顔にまで散っていた。"
+    - "最近、イヤホンを 30 分ほどつけているだけで、すぐに頭痛から始まる体調不良が訪れる。"
+    - "今日は一日休んだ。一日かけても微熱は治らなかった。"
+    - "糖質高いけど、風邪と言えばりんごなので、りんごを買ってきてもらった。1/4 玉だけだったけど、美味しくて幸せだった。"
+    - "体調わるかったが、消化不良がこわいので、食後のかかと落としだけはちゃんとやった。"
+20210519:
+  breakfast:
+    time: "10:30"
+    foods:
+      natto: "1ko"
+      ringo: "30g"
+      burokkori: "30g"
+      ichigo: "3ko"
+      gold-kiui: "0.5ko"
+      prune: "10g"
+      milk: "100ml"
+      tetsu-uehasu: "2ko"
+  lunch:
+    time: "13:30"
+    foods:
+      mentaiko: "30g"
+      okura: "2ko"
+      うどん: "#22g"
+      konbu: "10g"
+      maitake: "20g"
+      horenso: "40g"
+      tetsu-uehasu: "1ko"
+      低糖質おやつ: "#5g"
+  dinner:
+    time: "20:10"
+    foods:
+      retasu: "20g"
+      ブランパン: "#2.2g"
+      torimomo: "30g"
+      chomiryo: "#4g"
+      konbu: "5g"
+      グリンカレーレトルト: "#2.8g"
+      gohan: "50g"
+      おやつ: "#5g"
+    ketto:
+      before: 92
+      2h_after: 139
+  kanso:
+    - "体調不良。頭痛と吐き気がして、ベッドにこもり、泣く。"
+    - "夕飯後、腹が苦しくて怖くて横になれず、23時まで椅子に座って消化を待った。その間も、頭痛と腹張り・微熱があり、しんどかった。"
+    - "血糖値の結果が悪かったので、はまじと白米は封印することに決定。米50gしか食ってないのに・・"
+20210520:
+  breakfast:
+    time: "10:30"
+    foods:
+      yoguruto: "50g"
+      milk: "100ml"
+      tetsu-uehasu: "2ko"
+      ichigo: "3ko"
+      gold-kiui: "0.5ko"
+      prune: "20g"
+      burokkori: "30g"
+      mekabu: "40g"
+      低糖質くるみおかし: "#4g"
+    ketto:
+      before: 94
+      2h_after: 119
+  lunch:
+    time: "14:30"
+    foods:
+      うどん: "#22g"
+      プリン: "#5.6g"
+  dinner:
+    time: "19:20"
+    foods:
+      カレー: "#6g"
+      中濃ソース: "#4g"
+      tetsu-uehasu: "1ko"
+      buran-pan: "2ko"
+      SUNAOアイス: "#9.1g"
+      低糖質くるみおかし: "#4g"
+    ketto:
+      before: 89
+      2h_after: 116
+  kanso:
+    - "テーブルを見る限りは、白米のせいとは断言できなそうだが、今日から白米を使わないルール。"
+    - "体調不良は、主に頭痛・倦怠感・微熱・消化不良、悪化すると吐き気。"
+    - "慢性的に続いている。今日はずっと 6.8 ~ 9 度をうろうろ。おさまれ〜"

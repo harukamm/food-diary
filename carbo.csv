@@ -1,10 +1,11 @@
-id,title,amount,unit,carbo
+id,title,amount,unit,carbo,is_kome
 
 banana,バナナ,1,ko,19.4
 ichigo,いちご,1,ko,1.1
 gold-kiui,ゴールドキウイ,1,ko,13.5
 grapefruit,グレープフルーツ,1,ko,20
 prune,プルーン,100,g,56
+ringo,りんご,100,g,14.3
 
 torihamu,鶏ハム,1,g,0
 torimomo,鶏もも,100,g,0
@@ -23,8 +24,8 @@ tamanegi,たまねぎ,1,ko,14.4
 
 furugura,フルグラ,50,g,31.4
 yoguruto,ヨーグルト,100,g,5.8
-gohan,ご飯,150,g,55
-gokokumai,五穀米,100,g,50
+gohan,ご飯,150,g,55,x
+gokokumai,五穀米,100,g,50,x
 seachicken,シーチキン,1,ko,0.1
 chomiryo,なにかしらの調味料,1,g,1
 moyashi,もやし,100,g,1.3
@@ -40,6 +41,7 @@ sake,鮭,100,g,0.1
 kajiki,かじき,100,g,0.1
 jako,じゃこ,100,g,0.2
 shirasu,しらす,100,g,0
+mentaiko,明太子,25,g,0.75
 
 toumyo,豆苗,100,g,0.7
 edamame,枝豆,100,g,4.3
@@ -94,3 +96,5 @@ menchi-katsu,メンチカツ,154,g,14.3
 ton-katsu,トンカツ,130,g,12
 aji-fly,アジフライ,50,g,3.5
 kanicream-korokke,カニクリームコロッケ,60,g,13
+
+buran-pan,ブランパン,1,ko,2.2

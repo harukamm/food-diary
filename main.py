@@ -29,12 +29,14 @@ class CarboMap:
                 amount = words[2]
                 unit = words[3]
                 carbo = words[4]
+                is_kome = words[5].strip() == 'x' if 5 < len(words) else False
     
                 info = {}
                 info['title'] = title
                 info['amount'] = float(amount)
                 info['unit'] = unit
                 info['carbo'] = float(carbo)
+                info['is_kome'] = is_kome
     
                 res[id_] = info
         return res
@@ -59,6 +61,13 @@ class CarboMap:
         info = self.map[key]
         return str_(info["carbo"]) + "g / " + \
                 str_(info["amount"]) + info["unit"]
+
+    def is_kome(self, key):
+        if not key in self.map:
+            return False
+
+        info = self.map[key]
+        return info["is_kome"]
 
     def knows(self, key):
         return key in self.map
@@ -187,6 +196,7 @@ class MeshiMap:
                 yield "- 申告糖分"
                 foods = meal["foods"]
                 carbo_sum = 0
+                has_kome = False
                 for key, indicator in foods.items():
                     quantity, carbo = self.read_indicator(carbo_map, key, indicator)
 
@@ -198,6 +208,7 @@ class MeshiMap:
                     yield "  - " + title + display_quantity + ": " + str_(carbo) + "g"
 
                     carbo_sum += carbo
+                    has_kome = has_kome or carbo_map.is_kome(key)
 
                 yield "- 合計糖分: " + self.bold_if(carbo_sum, 40 < carbo_sum, "g")
                 carbo_history[date_ + "_" + meal_type] = carbo_sum
@@ -205,7 +216,10 @@ class MeshiMap:
                 if "ketto" in meal:
                     yield from self.markdown_ketto(meal["ketto"], carbo_sum)
                     diff, _a, hour_diff = self.calc_using_ketto(meal["ketto"])
-                    ketto_history[date_ + "_" + meal_type] = { "ketto_diff": diff, "carbo_sum": carbo_sum, "hour_diff": hour_diff }
+                    ketto_history[date_ + "_" + meal_type] = { \
+                            "ketto_diff": diff, "carbo_sum": carbo_sum, "hour_diff": hour_diff, \
+                            "has_kome": has_kome \
+                            }
 
                 carbo_total += carbo_sum
 
@@ -236,8 +250,8 @@ class MeshiMap:
 
         keys = list(ketto_history.keys())
         keys.sort()
-        yield   "|  | 日付 | 合計糖分 (g) | 血糖差 (dl/ml) | 血糖差 / 糖質 1g | 間隔 |"
-        yield   "| ---- | ---- | ---- | ---- | ---- | ---- |"
+        yield   "|  | 日時 | 合計糖分 (g) | 血糖差 | 上昇率 | 間隔 | 注釈 |"
+        yield   "| ---- | ---- | ---- | ---- | ---- | ---- | ---- |"
 
         for key in keys:
             info = ketto_history[key]
@@ -246,8 +260,9 @@ class MeshiMap:
             b = info["carbo_sum"]
             c = a / b
             d = info["hour_diff"]
+            kome = "米" if info["has_kome"] else ""
             link = "<a href='#" + key + "'>#</a>"
-            yield "| " + link + " | " + date + " | " + str_(b) + " | " + str_(a) + " | " + str_(c) + " | " + str_(d) + " | "
+            yield "| " + link + " | " + meal_type + " | " + str_(b) + " | " + str_(a) + " | " + str_(c) + " | " + str_(d) + " | " + kome + " | "
 
 
 class KaimonoMap:
