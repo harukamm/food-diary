@@ -141,7 +141,7 @@ function output_kaimono() {
     <input type='button' value='クリア' class='clear-button' />
     <br />
     <br />
-    <textarea style='width:100%;' id='free-memo'></textarea>
+    <textarea style='width:100%;' rows='6' id='free-memo'></textarea>
     """ >> $kaimono_html
   
   marked --gfm -i out/kaimono.md >> $kaimono_html

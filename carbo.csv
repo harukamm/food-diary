@@ -3,7 +3,7 @@ id,title,amount,unit,carbo,is_kome
 banana,バナナ,1,ko,19.4
 ichigo,いちご,1,ko,1.1
 gold-kiui,ゴールドキウイ,1,ko,13.5
-grapefruit,グレープフルーツ,1,ko,20
+grapefruit,グレープフルーツ,210,g,18.9
 prune,プルーン,100,g,56
 ringo,りんご,100,g,14.3
 
@@ -21,6 +21,7 @@ natto,納豆,1,ko,3.7
 
 ninjin,にんじん,100,g,6.5
 tamanegi,たまねぎ,1,ko,14.4
+tamanegi,,100,g,7.2
 
 furugura,フルグラ,50,g,31.4
 yoguruto,ヨーグルト,100,g,5.8
@@ -46,7 +47,6 @@ mentaiko,明太子,25,g,0.75
 toumyo,豆苗,100,g,0.7
 edamame,枝豆,100,g,4.3
 tamago,卵,1,ko,0.1
-tamanegi,玉ねぎ,1,ko,15
 mozuku,もずく酢,50,g,9
 kyuri,きゅうり,1,ko,2.0
 horenso,ほうれん草,100,g,0.3

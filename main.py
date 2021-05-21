@@ -30,15 +30,17 @@ class CarboMap:
                 unit = words[3]
                 carbo = words[4]
                 is_kome = words[5].strip() == 'x' if 5 < len(words) else False
-    
-                info = {}
-                info['title'] = title
-                info['amount'] = float(amount)
-                info['unit'] = unit
-                info['carbo'] = float(carbo)
-                info['is_kome'] = is_kome
-    
-                res[id_] = info
+
+                tup = (float(amount), unit, float(carbo))
+                if id_ in res:
+                    res[id_]['amount_unit_carbo'].append(tup)
+                else:
+                    info = {}
+                    info['title'] = title
+                    info['amount_unit_carbo'] = [tup]
+                    info['is_kome'] = is_kome
+                    res[id_] = info
+
         return res
 
     def get_title(self, key):
@@ -49,18 +51,23 @@ class CarboMap:
             return None
 
         info = self.map[key]
-        if unit and info["unit"] != unit:
-            return None
+        for amount_, unit_, carbo_ in info['amount_unit_carbo']:
+            if not unit or unit_ == unit:
+                return amount / amount_ * carbo_
 
-        return amount / info["amount"] * info["carbo"]
+        return None
         
     def get_carbo_rate_string(self, key):
         if not key in self.map:
             return None
 
         info = self.map[key]
-        return str_(info["carbo"]) + "g / " + \
-                str_(info["amount"]) + info["unit"]
+        rate_string = []
+        for amount_, unit_, carbo_ in info['amount_unit_carbo']:
+            rate_string.append(str_(carbo_) + "g / " + \
+                    str_(amount_) + unit_)
+
+        return ', '.join(rate_string)
 
     def is_kome(self, key):
         if not key in self.map:
@@ -104,9 +111,12 @@ class MeshiMap:
 
         return None
 
-    def format_date(self, date):
+    def parse_date(self, date):
         m = re.match(r'(\d{4})(\d{2})(\d{2})', str_(date))
-        return m.group(1) + "/" + m.group(2) + "/" + m.group(3)
+        return (m.group(1), m.group(2), m.group(3))
+
+    def format_date(self, date):
+        return "/".join(self.parse_date(date))
 
     def bold_if(self, txt, cond, suffix=""):
         txt = str_(txt) + str_(suffix)
@@ -131,10 +141,23 @@ class MeshiMap:
         yield "## もくじ"
         yield ""
 
+        item_per_month = {}
         for x in self.lst:
             date = str_(x["date"])
-            formatted = self.format_date(date)
-            yield '- <a href="#' + date + '"> ' + formatted + '</a>'
+            y, m, d = self.parse_date(date)
+            key = y + "/" + m
+
+            links = []
+            if key in item_per_month:
+                links = item_per_month[key]
+            else:
+                item_per_month[key] = links
+
+            links.append('<a href="#' + date + '">' + d + '</a>')
+
+        for key, links in item_per_month.items():
+            yield '- ' + key + ' ' + ' | '.join(links)
+
         yield '- <a href="#テーブル"> テーブル </a>'
 
         yield ""

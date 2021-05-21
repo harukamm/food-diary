@@ -74,7 +74,7 @@
       burokkori: "60g"
       banana: 0.5
       ichigo: 4
-      grapefruit: "0.4ko"
+      grapefruit: "80g"
       natto: 1
       yoguruto: "50g"
     ketto:
@@ -889,3 +889,41 @@
     - "テーブルを見る限りは、白米のせいとは断言できなそうだが、今日から白米を使わないルール。"
     - "体調不良は、主に頭痛・倦怠感・微熱・消化不良、悪化すると吐き気。"
     - "慢性的に続いている。今日はずっと 6.8 ~ 9 度をうろうろ。おさまれ〜"
+20210521:
+  breakfast:
+    time: "10:00"
+    foods:
+      grapefruit: "80g"
+      gold-kiui: "0.5ko"
+      prune: "20g"
+      milk: "100ml"
+      yoguruto: "50g"
+      burokkori: "30g"
+      natto: "1ko"
+      tetsu-uehasu: "1ko"
+      kimuchi: "10g"
+  lunch:
+    time: "14:00"
+    foods:
+      gohan: "50g"
+      ninjin: "20g"
+      horenso: "20g"
+      chomiryo: "5g"
+      tetsu-uehasu: "1ko"
+  dinner:
+    time: "19:40"
+    foods:
+      gokokumai: "12g"
+      chomiryo: "5g"
+      ninjin: "20g"
+      tamanegi: "30g"
+      tetsu-uehasu: "1ko"
+      ローソンクリームもち麦パン: "#5.7g"
+      低糖質くるみおかし: "#4g"
+    ketto:
+      before: 84
+      2h_after: 113
+  kanso:
+    - "先生に血糖値いいかんじに抑えられていると褒められた。わーい。"
+    - "二週間前のグリコアルブミン 14.4%。今日 11 時に測定した血糖値は 126 (食後一時間後)、HbA1c は 5.2 %。いいぞ〜"
+    - "消化不良のときはウォーキングするといいと言われた。頭痛とかがつらくないときはウォーキングをしよう。（たぶんしないかな）"
