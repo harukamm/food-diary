@@ -250,7 +250,7 @@ class MeshiMap:
 
         keys = list(ketto_history.keys())
         keys.sort()
-        yield   "|  | 日時 | 合計糖分 (g) | 血糖差 | 上昇率 | 間隔 | 注釈 |"
+        yield   "|  | 日時 | 合計糖質 | 血糖差 | 上昇率 | 間隔 | 注釈 |"
         yield   "| ---- | ---- | ---- | ---- | ---- | ---- | ---- |"
 
         for key in keys:
@@ -262,7 +262,8 @@ class MeshiMap:
             d = info["hour_diff"]
             kome = "米" if info["has_kome"] else ""
             link = "<a href='#" + key + "'>#</a>"
-            yield "| " + link + " | " + meal_type + " | " + str_(b) + " | " + str_(a) + " | " + str_(c) + " | " + str_(d) + " | " + kome + " | "
+            display_meal_type = { "breakfast": "朝", "lunch": "昼", "dinner": "夕" }
+            yield "| " + link + " | " + display_meal_type.get(meal_type, meal_type) + " | " + str_(b) + " | " + str_(a) + " | " + str_(c) + " | " + str_(d) + " | " + kome + " | "
 
 
 class KaimonoMap:
