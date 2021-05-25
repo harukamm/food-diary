@@ -927,3 +927,105 @@
     - "先生に血糖値いいかんじに抑えられていると褒められた。わーい。"
     - "二週間前のグリコアルブミン 14.4%。今日 11 時に測定した血糖値は 126 (食後一時間後)、HbA1c は 5.2 %。いいぞ〜"
     - "消化不良のときはウォーキングするといいと言われた。頭痛とかがつらくないときはウォーキングをしよう。（たぶんしないかな）"
+20210522:
+  breakfast:
+    time: "10:20"
+    foods:
+      burokkori: "30g"
+      retasu: "30g"
+      yoguruto: "50g"
+      milk: "100ml"
+      grapefruit: "80g"
+      gold-kiui: "0.5ko"
+      ichigo: "2ko"
+      prune: "20g"
+      tetsu-uehasu: "1ko"
+  lunch:
+    time: "14:10"
+    foods:
+      gohan: "30g"
+      asuparagasu: "1.5ko"
+      tamanegi: "15g"
+      ninjin: "15g"
+      chomiryo: "5g"
+      tetsu-uehasu: "2ko"
+      低糖質くるみおかし: "#4g"
+  dinner:
+    time: "21:10"
+    foods:
+      nagaimo: "120g"
+      kinu-tofu: "0.5ko"
+      naganegi: "0.5ko"
+      hakusai: "100g"
+      enoki: "40g"
+      冷凍みかん: "#4.8g"
+    ketto:
+      before: 83
+      2h_after: 96
+  kanso:
+    - "17時頃、昼飯が完全消化されず苦しかったので、理容室帰りのはまじと隅田川を 30 分ほど散歩した。"
+    - "食いすぎてお腹が苦しかったので、夕食後はいつものかかと落としに加えて、ヨガをしてお腹を動かした。"
+    - "そのおかげか、今日はレートがかなり低め。わーい。"
+    - "頭がじみ〜に痛いのは変わらずで、寝る時や横になるときは、いつも保冷剤がお友達。"
+    - "すき焼き、ふるさと納税の飛騨牛。わーい。"
+20210523:
+  breakfast:
+    time: "10:00"
+    foods:
+      yoguruto: "50g"
+      milk: "100ml"
+      gold-kiui: "0.5ko"
+      grapefruit: "80g"
+      prune: "20g"
+      ichigo: "1ko"
+      natto: "1ko"
+      tetsu-uehasu: "1ko"
+  lunch:
+    time: "14:00"
+    foods:
+      中華ラーメン: "#30g"
+      tetsu-uehasu: "1ko"
+      hakusai: "15g"
+      moyashi: "30g"
+  dinner:
+    time: "18:30"
+    foods:
+      サラダ_醤油ドレッシング: "#1g"
+      かにみそ: "#2g"
+      辛〜いブラックペッパーとエビ: "#3g"
+      マントウ: "#15g"
+      ブイヤベース: "#5g"
+    ketto:
+      before: 82
+      2h_after: 100
+  kanso:
+    - "夕飯は外食した。いい天気だったので浅草まで歩いて、飯食って、また浅草から自宅まで歩いた。"
+    - "初めての外食だったのでドキドキしたが、食前・食後に１時間弱ほど歩いたからか、血糖値に問題なし。"
+    - "食前血糖値は、測らなかったので、推定。歩きまくった後なので、恐らく低い。糖質量も、推定。"
+20210524:
+  breakfast:
+    time: "09:50"
+    foods:
+      prune: "20g"
+      gold-kiui: "0.5ko"
+      ichigo: "2ko"
+      mekabu: "40g"
+      yoguruto: "50g"
+      milk: "100ml"
+      tetsu-uehasu: "2ko"
+  lunch:
+    time: "14:30"
+    foods:
+      中華麺_90g: "#26g"
+      油淋鶏: "#8g"
+    ketto:
+      before: 88
+      2h_after: 102
+  dinner:
+    time: "21:00"
+    foods:
+      nagaimo: "70g"
+      tetsu-uehasu: "1ko"
+      ローソンクリームもち麦パン: "#5.7g"
+      クッキー: "#3g"
+      低糖質くるみおかし: "#4g"

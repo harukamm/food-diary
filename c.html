@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>スクワット</title>
+    <style>
+      .a {
+        font-size: 60pt;
+      }
+      .a#counter {
+        font-weight: bold;
+        font-size: 400pt;
+        color: blue;
+        text-align: center;
+      }
+      .a#step {
+        font-size: 100pt;
+        color: red;
+      }
+    </style>
+    <script>
+      var interval = null;
+      function seconds() {
+        return Math.floor(Date.now() / 1000);
+      }
+      function updateDisplay(startSeconds) {
+        const now = seconds();
+        const diff = now - startSeconds;
+        const s = 15;
+        const roundNth = Math.floor(diff / s);
+        var counter = "";
+        var round = "";
+        var step = "";
+        if (10 <= roundNth) {
+          counter = "おわりです！おつかれさま";
+          clearInterval(interval);
+        } else {
+          round = "" + (roundNth + 1) + " 回目";
+          var x = diff % s;
+          if (0 <= x && x < 6) {
+            counter = "" + x;
+            step = "さげて〜";
+          } else if (6 <= x && x < 8) {
+            counter = "" + (x - 5);
+            step = "とめてー";
+          } else {
+            var y = s - x;
+            counter = "" + y;
+            step = "もどってー";
+          }
+        }
+        document.getElementById("round").textContent = round;
+        document.getElementById("counter").textContent = counter;
+        document.getElementById("step").textContent = step;
+      }
+      function start() {
+        if (interval) {
+          clearInterval(interval);
+        }
+        const start = seconds();
+        interval = setInterval(updateDisplay.bind(null, start), 100);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="start" onClick="start();" />
+    <div class="a" id="round"></div>
+    <div class="a" id="counter"></div>
+    <div class="a" id="step"></div>
+  </body>
+</html>
