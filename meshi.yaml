@@ -1029,3 +1029,36 @@
       ローソンクリームもち麦パン: "#5.7g"
       クッキー: "#3g"
       低糖質くるみおかし: "#4g"
+20210525:
+  breakfast:
+    time: "10:00"
+    foods:
+      gold-kiui: "0.5ko"
+      ichigo: "2ko"
+      prune: "10g"
+      yoguruto: "50g"
+      milk: "100ml"
+      mekabu: "40g"
+      tetsu-uehasu: "3ko"
+      hakusai: "20g"
+      ninjin: "10g"
+  lunch:
+    time: "14:20"
+    foods:
+      めんたいパスタ: "#16.2g"
+      サラダ: "#6.9g"
+      chomiryo: "5g"
+  dinner:
+    time: "19:40"
+    foods:
+      生姜甘酢: "#2g"
+      nagaimo: "110g"
+      tamanegi: "100g"
+      kyabetsu: "70g"
+      buran-pan: "1ko"
+      低糖質チーズケーキ: "#3g"
+      タンパク質アイス_半分: "#7.5g"
+      おかし: "#2g"
+    ketto:
+      before: 87
+      2h_after: 114
