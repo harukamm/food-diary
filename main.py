@@ -137,6 +137,17 @@ class MeshiMap:
             return diff, tobun, hour_diff
         return None, None
 
+    def format_remark(self, items):
+        res = []
+        for item in items:
+            if item == 'kome':
+                res.append('米')
+            elif item == 'sanpo':
+                res.append('歩')
+            else:
+                raise Exception("Invalid remark item: " + item)
+        return ",".join(res)
+
     def markdown_index(self):
         yield "## もくじ"
         yield ""
@@ -220,6 +231,7 @@ class MeshiMap:
                 foods = meal["foods"]
                 carbo_sum = 0
                 has_kome = False
+                remarks = []
                 for key, indicator in foods.items():
                     quantity, carbo = self.read_indicator(carbo_map, key, indicator)
 
@@ -239,9 +251,15 @@ class MeshiMap:
                 if "ketto" in meal:
                     yield from self.markdown_ketto(meal["ketto"], carbo_sum)
                     diff, _a, hour_diff = self.calc_using_ketto(meal["ketto"])
+                    if has_kome:
+                        remarks.append('kome')
+                    if "remark" in meal:
+                        remark = meal["remark"]
+                        remarks = remarks + remark.split(',')
+
                     ketto_history[date_ + "_" + meal_type] = { \
                             "ketto_diff": diff, "carbo_sum": carbo_sum, "hour_diff": hour_diff, \
-                            "has_kome": has_kome \
+                            "remark_items": remarks \
                             }
 
                 carbo_total += carbo_sum
@@ -283,10 +301,10 @@ class MeshiMap:
             b = info["carbo_sum"]
             c = a / b
             d = info["hour_diff"]
-            kome = "米" if info["has_kome"] else ""
+            remark = self.format_remark(info["remark_items"])
             link = "<a href='#" + key + "'>#</a>"
             display_meal_type = { "breakfast": "朝", "lunch": "昼", "dinner": "夕" }
-            yield "| " + link + " | " + display_meal_type.get(meal_type, meal_type) + " | " + str_(b) + " | " + str_(a) + " | " + str_(c) + " | " + str_(d) + " | " + kome + " | "
+            yield "| " + link + " | " + display_meal_type.get(meal_type, meal_type) + " | " + str_(b) + " | " + str_(a) + " | " + str_(c) + " | " + str_(d) + " | " + remark + " | "
 
 
 class KaimonoMap:
