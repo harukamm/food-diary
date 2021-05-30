@@ -1106,6 +1106,7 @@
     ketto:
       before: 82
       2h_after: 164
+    remark: "zesshoku"
   lunch:
     time: "12:30"
     foods:
@@ -1206,3 +1207,39 @@
       卯の花: "#3g"
       babycheese: "1ko"
       低糖質おかし: "#8g"
+  kanso:
+    - "火曜から実家で仕事して暮らしていたが、低糖質に気を使ってくれたおかげでなかなか快適だった。美味しかったし。"
+    - "今日夜に帰ってきたけど、また実家に戻りたくなってきた・・"
+20210530:
+  breakfast:
+    time: "10:00"
+    foods:
+      ninjin: "10g"
+      edamame: "10g"
+      milk: "100ml"
+      mekabu: "40g"
+      momo: "60g"
+      パルテノ半分: "#4g"
+      tetsu-uehasu: "1ko"
+      prune: "10g"
+  lunch:
+    time: "15:00"
+    foods:
+      こまい: "#1g"
+      katakuriko: "8g"
+      tamanegi: "50g"
+      ninjin: "30g"
+      kyuri: "0.2ko"
+      nagaimo: "80g"
+      tetsu-uehasu: "2ko"
+  dinner:
+    time: "20:30"
+    foods:
+      edamame: "30g"
+      お好み焼き: "#15g"
+      低糖質お好み焼きソース: "#4g"
+      低糖質お菓子: "#5g"
+    ketto:
+      before: 96
+      2h_after: 110
+    remark: "sanpo"

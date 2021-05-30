@@ -133,9 +133,8 @@ class MeshiMap:
             after = max(after1 or 0, after2 or 0)
             hour_diff = 1 if after1 == after else 2
             diff = after - before
-            tobun = diff / 1.4
-            return diff, tobun, hour_diff
-        return None, None
+            return diff, hour_diff, before, after
+        return None
 
     def format_remark(self, items):
         res = []
@@ -144,6 +143,21 @@ class MeshiMap:
                 res.append('米')
             elif item == 'sanpo':
                 res.append('歩')
+            elif item == 'zesshoku':
+                res.append('絶食')
+            else:
+                raise Exception("Invalid remark item: " + item)
+        return ",".join(res)
+
+    def describe_remark(self, items):
+        res = []
+        for item in items:
+            if item == 'kome':
+                res.append('米系あり')
+            elif item == 'sanpo':
+                res.append('食後に散歩')
+            elif item == 'zesshoku':
+                res.append('前食抜き')
             else:
                 raise Exception("Invalid remark item: " + item)
         return ",".join(res)
@@ -174,22 +188,12 @@ class MeshiMap:
         yield ""
 
     def markdown_ketto(self, ketto, carbo_sum):
-        before = ketto["before"]
+        diff, hour_diff, before, after = self.calc_using_ketto(ketto)
 
         yield "- 血糖"
         yield "  - 食前: " + str_(before)
-
-        after1 = ketto.get("1h_after")
-        after2 = ketto.get("2h_after")
-
-        if after1:
-            yield "  - 食後１時間: " + str_(after1)
-        if after2:
-            yield "  - 食後２時間: " + str_(after2)
-
-        diff, tobun, hour_diff = self.calc_using_ketto(ketto)
-        if tobun:
-            yield "  - 差分: " + str_(diff)
+        yield "  - 食後 " + str_(hour_diff) + " 時間: " + str_(after)
+        yield "  - 差分: " + str_(diff)
  
     def markdown(self, carbo_map):
         yield "# めし"
@@ -248,18 +252,18 @@ class MeshiMap:
                 yield "- 合計糖分: " + self.bold_if(carbo_sum, 40 < carbo_sum, "g")
                 carbo_history[date_ + "_" + meal_type] = carbo_sum
 
+                if "remark" in meal:
+                    remark = meal["remark"]
+                    remarks = remarks + remark.split(',')
+                    yield "- 注釈: " + self.describe_remark(remarks)
+
                 if "ketto" in meal:
                     yield from self.markdown_ketto(meal["ketto"], carbo_sum)
-                    diff, _a, hour_diff = self.calc_using_ketto(meal["ketto"])
-                    if has_kome:
-                        remarks.append('kome')
-                    if "remark" in meal:
-                        remark = meal["remark"]
-                        remarks = remarks + remark.split(',')
-
+                    diff, hour_diff, ketto1, ketto2 = self.calc_using_ketto(meal["ketto"])
                     ketto_history[date_ + "_" + meal_type] = { \
+                            "ketto_before": ketto1, "ketto_after": ketto2,
                             "ketto_diff": diff, "carbo_sum": carbo_sum, "hour_diff": hour_diff, \
-                            "remark_items": remarks \
+                            "remark_items": ['kome'] + remarks if has_kome else remarks \
                             }
 
                 carbo_total += carbo_sum
@@ -291,8 +295,8 @@ class MeshiMap:
 
         keys = list(ketto_history.keys())
         keys.sort()
-        yield   "|  | 日時 | 合計糖質 | 血糖差 | 上昇率 | 間隔 | 注釈 |"
-        yield   "| ---- | ---- | ---- | ---- | ---- | ---- | ---- |"
+        yield   "|  | 日時 | 合計糖質 | 食前値 | 差 | 上昇率 | 間隔 | 注釈 |"
+        yield   "| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |"
 
         for key in keys:
             info = ketto_history[key]
@@ -301,10 +305,12 @@ class MeshiMap:
             b = info["carbo_sum"]
             c = a / b
             d = info["hour_diff"]
+            ketto_before = info["ketto_before"]
             remark = self.format_remark(info["remark_items"])
             link = "<a href='#" + key + "'>#</a>"
             display_meal_type = { "breakfast": "朝", "lunch": "昼", "dinner": "夕" }
-            yield "| " + link + " | " + display_meal_type.get(meal_type, meal_type) + " | " + str_(b) + " | " + str_(a) + " | " + str_(c) + " | " + str_(d) + " | " + remark + " | "
+
+            yield "| " + link + " | " + display_meal_type.get(meal_type, meal_type) + " | " + str_(b) + "g | " + str_(ketto_before) + " | +" + str_(a) + " | " + str_(c) + "% | " + str_(d) + " | " + remark + " | "
 
 
 class KaimonoMap:

@@ -155,12 +155,14 @@ function output_kaimono() {
 python3 main.py meshi kaimono
 
 mkdir -p out
-rm -fr out/img
+# rm -fr out/img
 rm -f $meshi_html $kaimono_html
 
 output_meshi
 output_kaimono
 
-cp -r img out
+# cp -r img out
+rsync -avr img out
+
 cp $meshi_html out
 cp $kaimono_html out
