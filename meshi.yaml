@@ -1243,3 +1243,39 @@
       before: 96
       2h_after: 110
     remark: "sanpo"
+20210531:
+  breakfast:
+    time: "10:20"
+    foods:
+      mekabu: "40g"
+      momo: "80g"
+      prune: "10g"
+      milk: "100ml"
+      tetsu-uehasu: "2ko"
+      パルテノ: "#5g"
+      ninjin: "20g"
+  lunch:
+    time: "14:10"
+    foods:
+      こまい: "#1g"
+      tetsu-uehasu: "1ko"
+      kyuri: "0.2ko"
+      tamanegi: "30g"
+      ninjin: "30g"
+      chomiryo: "3g"
+      prune: "10g"
+      milk: "100ml"
+      低糖質おかし: "#4g"
+  dinner:
+    time: "20:20"
+    foods:
+      お好み焼き: "#24g"
+      低糖質お好み焼きソース: "#5g"
+      nagaimo: "40g"
+      horenso: "20g"
+      kyuri: "0.3ko"
+      低糖質おかし: "#5g"
+    ketto:
+      before: 87
+      2h_after: 124
+    remark: "sanpo"

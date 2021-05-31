@@ -305,12 +305,13 @@ class MeshiMap:
             b = info["carbo_sum"]
             c = a / b
             d = info["hour_diff"]
-            ketto_before = info["ketto_before"]
+            e = info["ketto_before"]
+            ketto_before = self.bold_if(e, 90 <= e)
             remark = self.format_remark(info["remark_items"])
             link = "<a href='#" + key + "'>#</a>"
             display_meal_type = { "breakfast": "朝", "lunch": "昼", "dinner": "夕" }
 
-            yield "| " + link + " | " + display_meal_type.get(meal_type, meal_type) + " | " + str_(b) + "g | " + str_(ketto_before) + " | +" + str_(a) + " | " + str_(c) + "% | " + str_(d) + " | " + remark + " | "
+            yield "| " + link + " | " + display_meal_type.get(meal_type, meal_type) + " | " + str_(b) + "g | " + ketto_before + " | +" + str_(a) + " | " + str_(c) + " | " + str_(d) + " | " + remark + " | "
 
 
 class KaimonoMap:
