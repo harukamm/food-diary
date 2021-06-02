@@ -1279,3 +1279,77 @@
       before: 87
       2h_after: 124
     remark: "sanpo"
+20210601:
+  breakfast:
+    time: "10:20"
+    foods:
+      パルテノ: "#1g"
+      natto: "1ko"
+      momo: "70g"
+      prune: "10g"
+      milk: "100ml"
+      tetsu-uehasu: "2ko"
+      kyuri: "0.2ko"
+      低糖質おかし: "#3g"
+  lunch:
+    time: "14:00"
+    foods:
+      ninjin: "20g"
+      milk: "100ml"
+      tetsu-uehasu: "1ko"
+      パン: "#7g"
+      ソーセージ_3本: "#3g"
+      ケチャップ: "#5g"
+      低糖質おかし: "#6g"
+  dinner:
+    time: "20:30"
+    foods:
+      tamanegi: "100g"
+      moyashi: "40g"
+      horenso: "20g"
+      トマト缶: "#6g"
+      中華麺: "#25g"
+    ketto:
+      before: 92
+      2h_after: 113
+    remark: "sanpo"
+  kanso:
+    - "夕飯時、ピアノの音のせいで頭痛くて気持ち悪かったけど、トマト麺と生姜焼きが食べたくて執念で作って、バクバク食ったら元気になった。"
+    - "体調悪くても横になれないので、外に散歩にでてストレッチして、はまじとなぞなぞ出しながら、隅田川のいつもの橋。"
+20210602:
+  breakfast:
+    time: "10:20"
+    foods:
+      ninjin: "20g"
+      パルテノ: "#1g"
+      momo: "70g"
+      tetsu-uehasu: "2ko"
+      prune: "10g"
+      milk: "100ml"
+      mekabu: "40g"
+  lunch:
+    time: "13:20"
+    foods:
+      sake: "150g"
+      komugiko: "10g"
+      パン: "#4g"
+      ninjin: "15g"
+      tamanegi: "60g"
+      chomiryo: "#6g"
+      tetsu-uehasu: "1ko"
+      低糖質おかし: "#3g"
+  dinner:
+    time: "20:30"
+    foods:
+      torimune: "150g"
+      komugiko: "7g"
+      tamanegi: "30g"
+      低糖質アイス: "#13.4g"
+      低糖質おかし: "#3g"
+    remark: "sanpo"
+    ketto:
+      before: 85
+      2h_after: 93
+  kanso:
+    - "下のゲーム音と、隣のピアノの音に頭を悩ませる。"
+    - "ずっと顔がカッカするので保冷剤で冷やしていたが、夕方体温測ったら 37.4 度だった。はまじ曰く、軽い熱中症説？"
