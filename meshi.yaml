@@ -1353,3 +1353,147 @@
   kanso:
     - "下のゲーム音と、隣のピアノの音に頭を悩ませる。"
     - "ずっと顔がカッカするので保冷剤で冷やしていたが、夕方体温測ったら 37.4 度だった。はまじ曰く、軽い熱中症説？"
+20210603:
+  breakfast:
+    time: "10:10"
+    foods:
+      natto: "1ko"
+      momo: "60g"
+      prune: "10g"
+      moyashi: "10g"
+      ninjin: "10g"
+      milk: "100ml"
+      パルテノ: "#1g"
+      tetsu-uehasu: "1ko"
+      お好み焼き: "#10g"
+  lunch:
+    time: "12:40"
+    foods:
+      そば_３分の２: "#33g"
+      天ぷら_えび_なす_ししとう: "#5g"
+  dinner:
+    time: "20:20"
+    foods:
+      katakuriko: "5g"
+      horenso: "10g"
+      ninjin: "10g"
+      moyashi: "20g"
+      味噌汁: "#5g"
+      むかん: "#4.8g"
+      tetsu-uehasu: "2ko"
+      低糖質おやつ: "#3g"
+      はまじのアイスふたくち: "#4g"
+    ketto:
+      before: 77
+      2h_after: 112
+    remark: "sanpo"
+  kanso:
+    - "宇多田ヒカルの「いくらでもいくらでも頑張れる気がした」の歌詞で、いくらが食いたくなる。いくらは酢飯と食うのが一番だが、今は白米を禁止している上に、ナマ物も食えない身体なので、まあ諦めはつくが。ふいに食いたくなってしまった。"
+20210604:
+  breakfast:
+    time: "09:30"
+    foods:
+      natto: "1ko"
+      パルテノ: "#1.5g"
+      milk: "100ml"
+      tetsu-uehasu: "2ko"
+      ichigo: "1ko"
+      prune: "10g"
+      momo: "50g"
+      moyashi: "20g"
+  lunch:
+    time: "13:50"
+    foods:
+      うどん_80g: "#23g"
+      tamanegi: "40g"
+      burokkori: "50g"
+      ソーセージ: "#3g"
+      トマト缶: "#3g"
+      milk: "50ml"
+      namacream: "20ml"
+      tetsu-uehasu: "1ko"
+  dinner:
+    time: "20:20"
+    foods:
+      tamanegi: "80g"
+      うどん_80g: "#23g"
+      kyuri: "0.3ko"
+      chomiryo: "#3g"
+      低糖質おやつ: "#3g"
+    ketto:
+      before: 85
+      2h_after: 111
+    remark: "sanpo"
+  kanso:
+    - "無料の歯科検診いってきたけど、虫歯はなかった。"
+    - "昼間つくったうどん、やけに自他ともに絶賛を受ける。"
+    - "昼食後にさっそくフロスしてみた・・なかなか気分が良かったぞ"
+20210605:
+  breakfast:
+    time: "10:00"
+    foods:
+      mekabu: "40g"
+      ichigo: "3ko"
+      prune: "8g"
+      gold-kiui: "0.5ko"
+      milk: "150ml"
+      tetsu-uehasu: "2ko"
+  lunch:
+    time: "14:10"
+    foods:
+      低糖質お好み焼き: "#20g"
+      chomiryo: "#5g"
+      tetsu-uehasu: "1ko"
+  dinner:
+    time: "20:20"
+    foods:
+      moyashi: "30g"
+      kyuri: "0.3ko"
+      タンドリーチキン: "#2g"
+      白い恋人: "#6g"
+      シュガーラスク: "#4g"
+      低糖質アイス: "#6.7g"
+    remark: "sanpo"
+    ketto:
+      before: 95
+      2h_after: 101
+  kanso:
+    - "週末は、昼ご飯のあとに寝てしまうからか、どうしても夕食前の血糖値が上がりがち。"
+    - "引越し準備、朝飯後に箱詰め始めて、進捗がまあ出たので二人とも昼飯後に寝た。"
+20210606:
+  breakfast:
+    time: "10:30"
+    foods:
+      mekabu: "30g"
+      natto: "1ko"
+      milk: "100ml"
+      tetsu-uehasu: "2ko"
+      ichigo: "3ko"
+      prune: "8g"
+      gold-kiui: "0.5ko"
+  lunch:
+    time: "13:40"
+    foods:
+      daikon: "10g"
+      tetsu-uehasu: "1ko"
+      茶碗蒸し: "#2g"
+      toumyo: "50g"
+      タラタラしてんじゃねーよ_一部: "#2g"
+      低糖質おかし: "#6g"
+  dinner:
+    time: "20:50"
+    foods:
+      味噌汁: "#4g"
+      はちみつ: "#5g"
+      katakuriko: "8g"
+      tamanegi: "20g"
+      torimune: "140g"
+      gohan: "10g"
+      低糖質おかし: "#4g"
+    ketto:
+      before: 80
+      2h_after: 120
+    remark: "sanpo"
+  kanso:
+    - "夕飯すごい控えめに食べたのに、120 ギリでわらう。"
+    - "こういう特に悪〜いことしてないのに安全ラインの数値が出てこないと落ち込むけど、今は体調不良でもないし、良い献立だったという自信があるので、落ち込む気にもならない。器具の誤差だろ、とはまじとテキトーに流す。"
