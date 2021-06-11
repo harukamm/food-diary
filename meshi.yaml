@@ -996,7 +996,7 @@
       マントウ: "#15g"
       ブイヤベース: "#5g"
     ketto:
-      before: 82
+      before: "82?"
       2h_after: 100
     remark: "sanpo"
   kanso:
@@ -1497,3 +1497,145 @@
   kanso:
     - "夕飯すごい控えめに食べたのに、120 ギリでわらう。"
     - "こういう特に悪〜いことしてないのに安全ラインの数値が出てこないと落ち込むけど、今は体調不良でもないし、良い献立だったという自信があるので、落ち込む気にもならない。器具の誤差だろ、とはまじとテキトーに流す。"
+20210607:
+  breakfast:
+    time: "09:20"
+    foods:
+      tetsu-uehasu: "2ko"
+      ichigo: "2ko"
+      gold-kiui: "0.5ko"
+      prune: "10g"
+      milk: "100ml"
+      natto: "1ko"
+      mekabu: "40g"
+  lunch:
+    time: "12:10"
+    foods:
+      ハンバーグ大地: "#36g"
+      サラダ: "#3g"
+  dinner:
+    time: "21:10"
+    foods:
+      ichigo: "3ko"
+      prune: "10g"
+      momo: "50g"
+      ぶどう: "#8g"
+      tetsu-uehasu: "1ko"
+  kanso:
+    - "午前中、祈祷や出張所・タクシーで神田に課税証明書とか回収しにいっていて、ついでに久々に大好きなハンバーグ食べた。もちろんライス抜き。"
+    - "帰宅して頭痛があったので、夕方過ぎに一睡したら嘔吐。"
+    - "ウォーキングもできないので、夕食後は椅子で時間を過ごす。"
+20210608:
+  breakfast:
+    time: "10:50"
+    foods:
+      natto: "1ko"
+      tetsu-uehasu: "2ko"
+      gold-kiui: "0.5ko"
+      momo: "20g"
+      ぶどう: "#5g"
+      milk: "100ml"
+      prune: "10g"
+      低糖質おかし: "#3g"
+    ketto:
+      before: 92
+      2h_after: 133
+  lunch:
+    time: "15:30"
+    foods:
+      burokkori: "40g"
+      ninjin: "10g"
+      kyabetsu: "30g"
+      namacream: "80ml"
+      パン粉: "#8g"
+      milk: "80ml"
+      torimune: "150g"
+      低糖質おかし: "#3g"
+      tetsu-uehasu: "1ko"
+  dinner:
+    time: "21:00"
+    foods:
+      うどん_80g: "#23g"
+      komatsuna: "60g"
+      ソーセージ: "#2g"
+20210609:
+  breakfast:
+    time: "10:30"
+    foods:
+      tetsu-uehasu: "2ko"
+      寒天デザート: "#1g"
+      milk: "120ml"
+      ぶどう: "#3g"
+      momo: "15g"
+      prune: "10g"
+      mekabu: "40g"
+  lunch:
+    time: "14:00"
+    foods:
+      tetsu-uehasu: "1ko"
+      れんこん: "#15g"
+      moyashi: "50g"
+      kyuri: "0.3ko"
+      katakuriko: "8g"
+      甘い飴２個: "#10g"
+  dinner:
+    time: "19:30"
+    foods:
+      うどん_80g: "#23g"
+      tamago: "1ko"
+      naganegi: "0.5ko"
+      chomiryo: "5g"
+      edamame: "10g"
+    ketto:
+      before: 91
+      2h_after: 96
+    remark: "sanpo"
+  kanso:
+    - "夕食、本当だったらお菓子を食べるつもりだったんだけど、うどん食べたしグッと我慢。でも血糖値が久々に超安牌だった。「食べりゃよかった」と後悔したけど、こういう自制心が必要なのだと思えてきた。"
+20210610:
+  breakfast:
+    time: "10:40"
+    foods:
+      低糖質ゼリー_100g: "#4.9g"
+      ぶどう: "#4g"
+      prune: "10g"
+      momo: "10g"
+      milk: "150ml"
+      moyashi: "20g"
+      kyuri: "0.2ko"
+      tetsu-uehasu: "2ko"
+  lunch:
+    time: "13:40"
+    foods:
+      sake: "80g"
+      saba: "60g"
+      kyabetsu: "40g"
+      中華麺_70g: "#21g"
+      moyashi: "30g"
+      kyuri: "0.3ko"
+      chomiryo: "#4g"
+      tetsu-uehasu: "1ko"
+      低糖質ゼリー_150g: "#7.35g"
+    ketto:
+      before: "85?"
+      2h_after: 107
+  kanso:
+    - "昼、食後だけ血糖値をヒヤヒヤしながら測ったら、安牌だった・・こうしてヒヤヒヤするのはよくない。"
+    - "酢の物がいいのだろうか？麺類のとき、血糖値はいつも安定している気がする。"
+    - "ツイッターで、インスリン打ってる妊婦さん見つけて、私も後期になったら打つのかも・・と怖くなる。"
+20210611:
+  breakfast:
+    time: "11:00"
+    foods:
+      tetsu-uehasu: "2ko"
+      babycheese: "1ko"
+      ぶどう: "#4g"
+      momo: "6g"
+      prune: "10g"
+      kyabetsu: "20g"
+      milk: "150ml"
+      みかん缶詰_30g: "#4.5g"
+      低糖質ゼリー: "#0.6g"
+    ketto:
+      before: 79
+      2h_after: 120
