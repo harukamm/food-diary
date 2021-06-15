@@ -3,6 +3,7 @@ id,title,amount,unit,carbo,is_kome
 banana,バナナ,1,ko,19.4
 ichigo,いちご,1,ko,1.1
 gold-kiui,ゴールドキウイ,1,ko,13.5
+puramu,プラム,100,g,7.8
 grapefruit,グレープフルーツ,210,g,18.9
 prune,プルーン,100,g,56
 ringo,りんご,100,g,14.3
@@ -64,6 +65,7 @@ naganegi,長ネギ,1,ko,8.5
 nagaimo,長芋,100,g,12
 hakusai,白菜,100,g,1.9
 tomato,トマト,1,ko,5.5
+mini-tomato,プチトマト,1,ko,1.2
 okura,おくら,1,ko,0.16
 kimuchi,こくうまキムチ,100,g,11.5
 

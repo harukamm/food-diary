@@ -1638,4 +1638,120 @@
       低糖質ゼリー: "#0.6g"
     ketto:
       before: 79
-      2h_after: 120
+      2h_after: 110
+  lunch:
+    time: "14:50"
+    foods:
+      クッパスープ: "#6.2g"
+      ゼリー: "#20.8g"
+      かにかま: "#8.1g"
+  dinner:
+    time: "20:00"
+    foods:
+      焼きそば: "#20g"
+      kyabetsu: "40g"
+      tetsu-uehasu: "1ko"
+      低糖質クッキー: "#4g"
+      低糖質おかし: "#2g"
+      うめしば: "#1.1g"
+20210612:
+  breakfast:
+    time: "10:30"
+    foods:
+      milk: "100ml"
+      tetsu-uehasu: "2ko"
+      gold-kiui: "0.5ko"
+      natto: "1ko"
+      かぼちゃの煮付け: "#4g"
+      プリン: "#2.9g"
+      クッキー: "#4g"
+  lunch:
+    time: "15:20"
+    foods:
+      いか: "#2g"
+      コールスロー: "#4g"
+  dinner:
+    time: "17:20"
+    foods:
+      カルビやロースなどの焼き肉_with_レモン: "#2g"
+      チョレギサラダ: "#4g"
+      クッパスープ: "#5g"
+      ビビンバ微量: "#10g"
+      ナムル: "#4g"
+20210613:
+  breakfast:
+    time: "10:20"
+    foods:
+      tetsu-uehasu: "2ko"
+      natto: "1ko"
+      milk: "100ml"
+      ウインナー: "#3g"
+      果物_メロンとマンゴー: "#10g"
+  lunch:
+    time: "14:50"
+    foods:
+      kyabetsu: "50g"
+      さばみりん干し: "#10g"
+      かぶ: "#2.5g"
+      こんにゃくゼリー: "#1.6g"
+      tetsu-uehasu: "1ko"
+      puramu: "40g"
+  dinner:
+    time: "20:30"
+    foods:
+      chomiryo: "#10g"
+      katakuriko: "9g"
+      低糖質ドーナツひとくち: "#2g"
+      こんにゃくゼリー: "#1.6g"
+20210614:
+  breakfast:
+    time: "10:40"
+    foods:
+      tetsu-uehasu: "2ko"
+      こんにゃくゼリー: "#1.6g"
+      milk: "100ml"
+      めかぶ: "#3.5g"
+      gold-kiui: "0.5ko"
+      puramu: "40g"
+      チーカマ: "#3.6g"
+  lunch:
+    time: "14:40"
+    foods:
+      ジョナサン薬膳ハンバーグ: "#25g"
+      オニオングラタンスープ半分: "#8g"
+  dinner:
+    time: "19:50"
+    foods:
+      かぶ: "#2g"
+      chomiryo: "3g"
+      mini-tomato: "2ko"
+      kyabetsu: "30g"
+      tetsu-uehasu: "1ko"
+      低糖質ドーナツ_ひとくち: "#2g"
+      puramu: "40g"
+      こんにゃくゼリー: "#1.6g"
+20210615:
+  breakfast:
+    time: "09:50"
+    foods:
+      milk: "150ml"
+      ウインナー: "#3g"
+      ケチャップ: "#5g"
+      puramu: "40g"
+      gold-kiui: "0.5ko"
+      tetsu-uehasu: "2ko"
+      kyabetsu: "50g"
+      mini-tomato: "2ko"
+  lunch:
+    time: "13:40"
+    foods:
+      kyabetsu: "20g"
+      kyuri: "0.2ko"
+      moyashi: "30g"
+      natto: "0.5ko"
+      okura: "2.5ko"
+      うどん_65g: "#18g"
+      chomiryo: "2g"
+      ラムネアイス_ふたくち: "#4g"
+      tetsu-uehasu: "1ko"
+      低糖質ドーナツ: "#4g"
