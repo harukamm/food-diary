@@ -24,6 +24,9 @@ class CarboMap:
                     continue
                 if words[0][0] == '#':
                     continue
+                if len(words) < 5:
+                    raise Exception("Invalid carbo line: " + line)
+
                 id_ = words[0]
                 title = words[1]
                 amount = words[2]
@@ -375,20 +378,28 @@ class KaimonoMap:
         return is_important, is_weakly_recommended
 
     def format_item(self, item, carbo_map):
-        m = re.match(r'^([\w-]+)(.*)$', item)
+        m = re.match(r'^(#)?([\w-]+)(.*)$', item)
         if not m:
             raise Exception("Invalid item: " + item)
 
-        item_key = m.group(1)
-        modifiers = m.group(2)
+        has_hash = bool(m.group(1))
+        item_key = m.group(2)
+        modifiers = m.group(3)
 
+        if has_hash:
+            carbo_rate_str = ""
+            title = item_key
+        else:
+            carbo_rate_str = carbo_map.get_carbo_rate_string(item_key)
+            title = carbo_map.get_title(item_key)
+            if not carbo_rate_str or not title:
+                raise Exception("Unknown key: " + item_key)
+
+        return self.item_html(title, carbo_rate_str, modifiers)
+
+    def item_html(self, title, carbo_rate_str, modifiers):
         is_important, is_weakly_recommended = \
                 self.parse_modifiers(modifiers)
-
-        carbo_rate_str = carbo_map.get_carbo_rate_string(item_key)
-        title = carbo_map.get_title(item_key)
-        if not carbo_rate_str or not title:
-            raise Exception("Unknown key: " + item_key)
 
         result = '<span class="title">' + title + '</span>'
         carbo_color = 'gray'

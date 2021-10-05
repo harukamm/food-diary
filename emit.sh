@@ -1,7 +1,7 @@
 set -eu
 
-meshi_html="a.html"
-kaimono_html="b.html"
+meshi_html="meshi.html"
+kaimono_html="kaimono.html"
 
 function output_meshi() {
   echo """<!DOCTYPE html>
@@ -152,9 +152,9 @@ function output_kaimono() {
   </html>""" >> $kaimono_html
 }
 
+mkdir -p out
 python3 main.py meshi kaimono
 
-mkdir -p out
 # rm -fr out/img
 rm -f $meshi_html $kaimono_html
 

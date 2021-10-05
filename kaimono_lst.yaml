@@ -19,6 +19,7 @@
   - "toumyo"
   - "komatsuna"
   - "retasu"
+  - "kyabetsu"
 
 野菜:
   - "myoga"
@@ -31,6 +32,8 @@
   - "ninjin"
   - "tamanegi"
   - "nira"
+  - "kabocha"
+  - "jagaimo"
 
 マメ系・かさまし系:
   - "natto"
@@ -61,6 +64,7 @@
   - "tori-hikiniku"
   - "aibiki"
   - "soseji"
+  - "#ベーコン"
 
 お魚:
   - "mentaiko"
@@ -69,6 +73,7 @@
   - "jako"
   - "shirasu"
   - "kajiki"
+  - "#おもしろ魚"
 
 チーズ:
   - "creamcheese!"
@@ -87,3 +92,6 @@
   - "beans"
   - "carbo-zero-noodle"
   - "coca-cola-zero"
+  - "#コンソメ"
+  - "#岩下新生姜"
+  - "#ちーかま"
